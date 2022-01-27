@@ -1,5 +1,6 @@
 # Autoencoder-TDLOG
- For TDLog and MOPSI Project at ENPC
+ For TDLog and MOPSI Project at ENPC 
+ 
 Nous avons décidé de faire porter notre projet TDLog sur le sujet que nous traitons en
 MOPSI. Le problème qui se pose en modélisation moléculaire est que le temps nécessaire
 pour observer de lents changements de conformation du système est généralement plus
