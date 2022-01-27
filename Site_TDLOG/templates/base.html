@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Deep Learning applied to molecular dynamics</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style_base.css') }}">
+    {% block styles %} {% endblock %}
+    <script src="http://x3dom.org/release/x3dom.js"></script>
+    <link rel="stylesheet" href="http://x3dom.org/release/x3dom.css" />
+    <script src="https://www.w3schools.com/lib/w3data.js" ></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    <script src="http://x3dom.org/release/x3dom.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src= "/static/js/jmol/jsmol/jsmol/JSmol.min.js"></script>
+    <script src= "/static/js/jmol/jsmol/jsmol/js/Jmol2.js"></script>
+    <script> jmolInitialize("/static/js/jmol/jsmol/jsmol");</script>
+    <script src="/static/js/jmol/jsmol/jsmol/JSmol.lite.nojq.js"></script>
+
+<header>
+    <div class="page_title_connection">
+        <h1>Deep Learning for molecular simulation</h1>
+        <button id="btn_connection"> 
+            {% if current_user.is_authenticated %}
+                {{current_user.username}}
+            {% else %}
+                Log In
+            {% endif %}
+        </button>
+        {% if current_user.is_authenticated %}
+            <div id="connection_window_id" class="connection_window">
+                <div class="connection_window-content">
+                    <span class="close_connection_window">&times;</span>
+                    Hey {{current_user.username}} !
+                    <div class="connection_ask_container">
+                        <a class="window_onglet"href="{{ url_for('profil_visualization_history', status='Etudiant', username='Inès VATI') }}">See your account !</a>
+                        <a class="window_onglet" href="{{url_for('logout')}}">Log out</a>
+                    </div>
+                </div>        
+            </div>
+        {% else %}
+            <div id="connection_window_id" class="connection_window">
+                <div class="connection_window-content">
+                    <span class="close_connection_window">&times;</span>
+                    Please connect !
+                    <div class="connection_ask_container">
+                        <a class="window_onglet" href="{{ url_for('login') }}"> Login !</a>
+                        <a class="window_onglet">Forgot password ?</a>
+                        <a class="window_onglet"href="{{ url_for('register') }}">New to the website ? Register !</a>
+                    </div>
+                </div>        
+            </div>
+        {% endif %}
+        <script src="/static/js/script_site.js"></script>
+    </div>
+    <nav>
+        <a class="onglet" href="{{ url_for('index', connexion_bool=connexion, user_name=username) }}">Homepage</a> <br>
+        <a class="onglet" href="{{ url_for('visualisation', connexion_bool=connexion, user_name=username) }}">Visualisation</a> <br>
+        <a class="onglet" href="{{ url_for('explication', connexion_bool=connexion, user_name=username) }}">Explication</a>
+    </nav>
+</header>
+<body>
+    <div class= container-fluid>
+        <div class=container>
+            <h1 class="page-title">{{title}}</h1>
+            <div class="block">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

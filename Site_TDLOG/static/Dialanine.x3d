@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN"
+  "http://www.web3d.org/specifications/x3d-3.0.dtd">
+
+<X3D version='3.1' profile='Interchange'>
+<head>
+  <meta name='description' content='VMD Molecular Graphics'/>
+</head>
+<Scene>
+<!-- Created with VMD: -->
+<!-- http://www.ks.uiuc.edu/Research/vmd/ -->
+<Viewpoint description="VMD Perspective View" fieldOfView="1.287" orientation="0 0 -1 0" position="0 0 2" centerOfRotation="0 0 0" />
+<Background skyColor='0 0 0'/>
+<!-- VMD: Starting axes output. -->
+<Transform translation='-0.981667 -0.84375 0' center='0.0 -0.10625 0.0' rotation='0.81672 0 -0.577034  -1.43715'>
+  <Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+    <Cylinder bottom='false' height='0.2125' radius='0.03' side='true' top='false' />
+  </Shape>
+</Transform>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.1367 -0.878798 -0.141273, -1.14363 -0.888342 -0.13795, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.7662 -0.467297 0.441102, 0.823226 -0.388735 0.413745, 0.796643 -0.430507 0.424292'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.1367 -0.878798 -0.141273, -1.14363 -0.888342 -0.13795, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.14363 -0.888342 -0.13795, -1.149 -0.899167 -0.135935, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.823226 -0.388735 0.413745, 0.867461 -0.299624 0.397161, 0.847699 -0.345966 0.402137'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.14363 -0.888342 -0.13795, -1.149 -0.899167 -0.135935, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.149 -0.899167 -0.135935, -1.15261 -0.910857 -0.135307, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.867461 -0.299624 0.397161, 0.897206 -0.20339 0.391988, 0.885 -0.252514 0.391167'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.149 -0.899167 -0.135935, -1.15261 -0.910857 -0.135307, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15261 -0.910857 -0.135307, -1.15433 -0.922963 -0.136089, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.897206 -0.20339 0.391988, 0.911317 -0.103731 0.398424, 0.907112 -0.153744 0.391804'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15261 -0.910857 -0.135307, -1.15433 -0.922963 -0.136089, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15433 -0.922963 -0.136089, -1.15408 -0.935021 -0.138251, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.911317 -0.103731 0.398424, 0.909252 -0.00447637 0.416223, 0.913186 -0.0534514 0.404024'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15433 -0.922963 -0.136089, -1.15408 -0.935021 -0.138251, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15408 -0.935021 -0.138251, -1.15187 -0.946565 -0.14171, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.909252 -0.00447637 0.416223, 0.89109 0.0905588 0.4447, 0.902987 0.0445101 0.427356'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15408 -0.935021 -0.138251, -1.15187 -0.946565 -0.14171, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15187 -0.946565 -0.14171, -1.14779 -0.957154 -0.146334, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.89109 0.0905588 0.4447, 0.85753 0.177723 0.48276, 0.876909 0.136376 0.460904'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.15187 -0.946565 -0.14171, -1.14779 -0.957154 -0.146334, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.14779 -0.957154 -0.146334, -1.142 -0.966379 -0.151944, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.85753 0.177723 0.48276, 0.809861 0.253667 0.528941, 0.835953 0.218615 0.503379'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.14779 -0.957154 -0.146334, -1.142 -0.966379 -0.151944, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.142 -0.966379 -0.151944, -1.13472 -0.973887 -0.158325, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.809861 0.253667 0.528941, 0.749914 0.315471 0.58147, 0.781693 0.288068 0.553149'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.142 -0.966379 -0.151944, -1.13472 -0.973887 -0.158325, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.13472 -0.973887 -0.158325, -1.12623 -0.979389 -0.165232, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.749914 0.315471 0.58147, 0.679995 0.36076 0.638326, 0.716214 0.342065 0.6083'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.13472 -0.973887 -0.158325, -1.12623 -0.979389 -0.165232, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.12623 -0.979389 -0.165232, -1.11685 -0.982673 -0.172399, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.679995 0.36076 0.638326, 0.602789 0.387795 0.697324, 0.642033 0.378531 0.666715'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.12623 -0.979389 -0.165232, -1.11685 -0.982673 -0.172399, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.11685 -0.982673 -0.172399, -1.10694 -0.983613 -0.179551, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.602789 0.387795 0.697324, 0.521263 0.395536 0.756198, 0.562 0.396065 0.726146'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.11685 -0.982673 -0.172399, -1.10694 -0.983613 -0.179551, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.10694 -0.983613 -0.179551, -1.0969 -0.982174 -0.186412, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.521263 0.395536 0.756198, 0.438551 0.383686 0.812686, 0.479191 0.393993 0.784312'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.10694 -0.983613 -0.179551, -1.0969 -0.982174 -0.186412, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.0969 -0.982174 -0.186412, -1.08709 -0.97841 -0.192721, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.438551 0.383686 0.812686, 0.357831 0.3527 0.864615, 0.396788 0.372395 0.838976'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.0969 -0.982174 -0.186412, -1.08709 -0.97841 -0.192721, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.08709 -0.97841 -0.192721, -1.0779 -0.972466 -0.198233, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.357831 0.3527 0.864615, 0.282206 0.303768 0.909992, 0.317958 0.332101 0.888038'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.08709 -0.97841 -0.192721, -1.0779 -0.972466 -0.198233, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.0779 -0.972466 -0.198233, -1.06969 -0.96457 -0.202737, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.282206 0.303768 0.909992, 0.214581 0.238773 0.947071, 0.24573 0.274658 0.929613'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.0779 -0.972466 -0.198233, -1.06969 -0.96457 -0.202737, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.06969 -0.96457 -0.202737, -1.06276 -0.955026 -0.206061, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.214581 0.238773 0.947071, 0.157555 0.16021 0.974428, 0.182881 0.202275 0.962102'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.06969 -0.96457 -0.202737, -1.06276 -0.955026 -0.206061, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.06276 -0.955026 -0.206061, -1.05739 -0.944201 -0.208075, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.157555 0.16021 0.974428, 0.11332 0.0710991 0.991011, 0.131825 0.117734 0.984257'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.06276 -0.955026 -0.206061, -1.05739 -0.944201 -0.208075, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05739 -0.944201 -0.208075, -1.05377 -0.932511 -0.208704, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.11332 0.0710991 0.991011, 0.0835748 -0.0251349 0.996185, 0.0945238 0.0242823 0.995227'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05739 -0.944201 -0.208075, -1.05377 -0.932511 -0.208704, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05377 -0.932511 -0.208704, -1.05206 -0.920405 -0.207922, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.0835748 -0.0251349 0.996185, 0.0694639 -0.124794 0.989748, 0.0724116 -0.0744877 0.99459'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05377 -0.932511 -0.208704, -1.05206 -0.920405 -0.207922, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05206 -0.920405 -0.207922, -1.05231 -0.908347 -0.20576, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.0694639 -0.124794 0.989748, 0.071529 -0.224049 0.97195, 0.0663381 -0.174781 0.98237'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05206 -0.920405 -0.207922, -1.05231 -0.908347 -0.20576, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05231 -0.908347 -0.20576, -1.05452 -0.896803 -0.2023, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.071529 -0.224049 0.97195, 0.0896906 -0.319084 0.943473, 0.0765365 -0.272742 0.959038'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05231 -0.908347 -0.20576, -1.05452 -0.896803 -0.2023, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05452 -0.896803 -0.2023, -1.05859 -0.886214 -0.197677, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.0896906 -0.319084 0.943473, 0.123251 -0.406248 0.905413, 0.102615 -0.364608 0.92549'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05452 -0.896803 -0.2023, -1.05859 -0.886214 -0.197677, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05859 -0.886214 -0.197677, -1.06438 -0.876989 -0.192067, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.123251 -0.406248 0.905413, 0.17092 -0.482191 0.859231, 0.143571 -0.446847 0.883015'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.05859 -0.886214 -0.197677, -1.06438 -0.876989 -0.192067, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.06438 -0.876989 -0.192067, -1.07167 -0.869481 -0.185686, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.17092 -0.482191 0.859231, 0.230867 -0.543995 0.806703, 0.197831 -0.5163 0.833245'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.06438 -0.876989 -0.192067, -1.07167 -0.869481 -0.185686, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.07167 -0.869481 -0.185686, -1.08016 -0.863979 -0.178779, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.230867 -0.543995 0.806703, 0.300786 -0.589285 0.749847, 0.26331 -0.570297 0.778093'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.07167 -0.869481 -0.185686, -1.08016 -0.863979 -0.178779, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.08016 -0.863979 -0.178779, -1.08954 -0.860695 -0.171612, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.300786 -0.589285 0.749847, 0.377992 -0.61632 0.690849, 0.337492 -0.606763 0.719679'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.08016 -0.863979 -0.178779, -1.08954 -0.860695 -0.171612, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.08954 -0.860695 -0.171612, -1.09944 -0.859755 -0.16446, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.377992 -0.61632 0.690849, 0.459518 -0.624061 0.631974, 0.417524 -0.624297 0.660247'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.08954 -0.860695 -0.171612, -1.09944 -0.859755 -0.16446, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.09944 -0.859755 -0.16446, -1.10949 -0.861194 -0.157598, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.459518 -0.624061 0.631974, 0.54223 -0.61221 0.575487, 0.500334 -0.622225 0.602081'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.09944 -0.859755 -0.16446, -1.10949 -0.861194 -0.157598, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.10949 -0.861194 -0.157598, -1.1193 -0.864958 -0.15129, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.54223 -0.61221 0.575487, 0.62295 -0.581224 0.523557, 0.582736 -0.600627 0.547417'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.10949 -0.861194 -0.157598, -1.1193 -0.864958 -0.15129, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.1193 -0.864958 -0.15129, -1.12848 -0.870902 -0.145777, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.62295 -0.581224 0.523557, 0.698575 -0.532293 0.478181, 0.661566 -0.560332 0.498355'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.1193 -0.864958 -0.15129, -1.12848 -0.870902 -0.145777, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.12848 -0.870902 -0.145777, -1.1367 -0.878798 -0.141273, -1.12464 -0.916687 -0.202359'/>
+    <Normal vector='0.698575 -0.532293 0.478181, 0.7662 -0.467297 0.441102, 0.733794 -0.502889 0.456781'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.65 0 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-1.12848 -0.870902 -0.145777, -1.1367 -0.878798 -0.141273, -1.10319 -0.921684 -0.172005'/>
+    <Normal vector='0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437, 0.571888 -0.133252 0.809437'/>
+  </IndexedFaceSet>
+</Shape>
+<Transform translation='-0.981667 -0.84375 0' center='0.0 -0.10625 0.0' rotation='-0.028793 0 0.999585  -0.220332'>
+  <Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+    <Cylinder bottom='false' height='0.2125' radius='0.03' side='true' top='false' />
+  </Shape>
+</Transform>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.956476 -0.738262 0.059957, -0.967222 -0.735822 0.0546019, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.0125435 -0.872781 -0.48795, 0.0759195 -0.89287 -0.443868, 0.0337692 -0.882141 -0.469774'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.956476 -0.738262 0.059957, -0.967222 -0.735822 0.0546019, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.967222 -0.735822 0.0546019, -0.97674 -0.733643 0.0472, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.0759195 -0.89287 -0.443868, 0.154266 -0.910803 -0.382936, 0.117875 -0.901312 -0.416825'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.967222 -0.735822 0.0546019, -0.97674 -0.733643 0.0472, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.97674 -0.733643 0.0472, -0.984662 -0.73181 0.0380356, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.154266 -0.910803 -0.382936, 0.219485 -0.925891 -0.307495, 0.190262 -0.917961 -0.348065'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.97674 -0.733643 0.0472, -0.984662 -0.73181 0.0380356, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.984662 -0.73181 0.0380356, -0.990686 -0.730394 0.0274608, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.219485 -0.925891 -0.307495, 0.26907 -0.937553 -0.220444, 0.248146 -0.931448 -0.266136'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.984662 -0.73181 0.0380356, -0.990686 -0.730394 0.0274608, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.990686 -0.730394 0.0274608, -0.994579 -0.729447 0.0158822, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.26907 -0.937553 -0.220444, 0.301117 -0.945342 -0.125129, 0.289305 -0.941255 -0.174187'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.990686 -0.730394 0.0274608, -0.994579 -0.729447 0.0158822, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.994579 -0.729447 0.0158822, -0.996192 -0.729008 0.0037446, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.301117 -0.945342 -0.125129, 0.314392 -0.948958 -0.0252135, 0.312156 -0.947006 -0.0757511'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.994579 -0.729447 0.0158822, -0.996192 -0.729008 0.0037446, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.996192 -0.729008 0.0037446, -0.995462 -0.729093 -0.00848551, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.314392 -0.948958 -0.0252135, 0.308387 -0.948263 0.075464, 0.315822 -0.948479 0.0253887'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.996192 -0.729008 0.0037446, -0.995462 -0.729093 -0.00848551, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.995462 -0.729093 -0.00848551, -0.992418 -0.729698 -0.0203381, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.308387 -0.948263 0.075464, 0.283331 -0.943283 0.173034, 0.300161 -0.945617 0.125346'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.995462 -0.729093 -0.00848551, -0.992418 -0.729698 -0.0203381, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.992418 -0.729698 -0.0203381, -0.987177 -0.7308 -0.0313578, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.283331 -0.943283 0.173034, 0.240188 -0.934209 0.263747, 0.265775 -0.938531 0.220279'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.992418 -0.729698 -0.0203381, -0.987177 -0.7308 -0.0313578, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.987177 -0.7308 -0.0313578, -0.979941 -0.732357 -0.041121, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.240188 -0.934209 0.263747, 0.180616 -0.921391 0.344118, 0.213986 -0.927493 0.30654'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.987177 -0.7308 -0.0313578, -0.979941 -0.732357 -0.041121, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.979941 -0.732357 -0.041121, -0.970986 -0.734309 -0.0492526, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.180616 -0.921391 0.344118, 0.106904 -0.90532 0.411056, 0.146783 -0.912927 0.380813'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.979941 -0.732357 -0.041121, -0.970986 -0.734309 -0.0492526, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.970986 -0.734309 -0.0492526, -0.960658 -0.736581 -0.05544, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.106904 -0.90532 0.411056, 0.0218844 -0.886615 0.46199, 0.0667504 -0.895393 0.440245'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.970986 -0.734309 -0.0492526, -0.960658 -0.736581 -0.05544, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.960658 -0.736581 -0.05544, -0.949354 -0.739086 -0.0594455, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='0.0218844 -0.886615 0.46199, -0.0711752 -0.865994 0.494963, -0.0230377 -0.875565 0.482552'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.960658 -0.736581 -0.05544, -0.949354 -0.739086 -0.0594455, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.949354 -0.739086 -0.0594455, -0.937507 -0.741728 -0.0611152, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.0711752 -0.865994 0.494963, -0.168698 -0.844249 0.508708, -0.11913 -0.854204 0.506107'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.949354 -0.739086 -0.0594455, -0.937507 -0.741728 -0.0611152, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.937507 -0.741728 -0.0611152, -0.925573 -0.744404 -0.0603848, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.168698 -0.844249 0.508708, -0.266938 -0.822217 0.502696, -0.217834 -0.832131 0.510005'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.937507 -0.741728 -0.0611152, -0.925573 -0.744404 -0.0603848, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.925573 -0.744404 -0.0603848, -0.91401 -0.747013 -0.0572825, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.266938 -0.822217 0.502696, -0.362118 -0.800744 0.477158, -0.315357 -0.810196 0.494098'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.925573 -0.744404 -0.0603848, -0.91401 -0.747013 -0.0572825, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.91401 -0.747013 -0.0572825, -0.903264 -0.749453 -0.0519275, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.362118 -0.800744 0.477158, -0.450581 -0.780655 0.433076, -0.40795 -0.78924 0.458995'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.91401 -0.747013 -0.0572825, -0.903264 -0.749453 -0.0519275, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.903264 -0.749453 -0.0519275, -0.893747 -0.751632 -0.0445255, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.450581 -0.780655 0.433076, -0.528927 -0.762723 0.372143, -0.492056 -0.77007 0.406046'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.903264 -0.749453 -0.0519275, -0.893747 -0.751632 -0.0445255, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.893747 -0.751632 -0.0445255, -0.885824 -0.753464 -0.0353611, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.528927 -0.762723 0.372143, -0.594146 -0.747635 0.296702, -0.564443 -0.753421 0.337286'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.893747 -0.751632 -0.0445255, -0.885824 -0.753464 -0.0353611, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.885824 -0.753464 -0.0353611, -0.8798 -0.754881 -0.0247864, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.594146 -0.747635 0.296702, -0.643732 -0.735973 0.209652, -0.622327 -0.739933 0.255358'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.885824 -0.753464 -0.0353611, -0.8798 -0.754881 -0.0247864, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.8798 -0.754881 -0.0247864, -0.875908 -0.755827 -0.0132077, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.643732 -0.735973 0.209652, -0.675778 -0.728184 0.114337, -0.663486 -0.730126 0.163408'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.8798 -0.754881 -0.0247864, -0.875908 -0.755827 -0.0132077, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.875908 -0.755827 -0.0132077, -0.874295 -0.756267 -0.00107009, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.675778 -0.728184 0.114337, -0.689053 -0.724567 0.0144208, -0.686337 -0.724375 0.0649723'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.875908 -0.755827 -0.0132077, -0.874295 -0.756267 -0.00107009, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.874295 -0.756267 -0.00107009, -0.875024 -0.756182 0.01116, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.689053 -0.724567 0.0144208, -0.683048 -0.725263 -0.0862566, -0.690003 -0.722902 -0.0361675'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.874295 -0.756267 -0.00107009, -0.875024 -0.756182 0.01116, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.875024 -0.756182 0.01116, -0.878068 -0.755577 0.0230127, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.683048 -0.725263 -0.0862566, -0.657992 -0.730243 -0.183827, -0.674342 -0.725764 -0.136125'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.875024 -0.756182 0.01116, -0.878068 -0.755577 0.0230127, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.878068 -0.755577 0.0230127, -0.883309 -0.754475 0.0340323, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.657992 -0.730243 -0.183827, -0.614849 -0.739316 -0.27454, -0.639956 -0.73285 -0.231058'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.878068 -0.755577 0.0230127, -0.883309 -0.754475 0.0340323, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.883309 -0.754475 0.0340323, -0.890546 -0.752918 0.0437955, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.614849 -0.739316 -0.27454, -0.555277 -0.752135 -0.35491, -0.588166 -0.743888 -0.317319'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.883309 -0.754475 0.0340323, -0.890546 -0.752918 0.0437955, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.890546 -0.752918 0.0437955, -0.8995 -0.750966 0.0519271, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.555277 -0.752135 -0.35491, -0.481564 -0.768206 -0.421848, -0.520964 -0.758454 -0.391592'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.890546 -0.752918 0.0437955, -0.8995 -0.750966 0.0519271, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.8995 -0.750966 0.0519271, -0.909828 -0.748693 0.0581145, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.481564 -0.768206 -0.421848, -0.396545 -0.786911 -0.472783, -0.440931 -0.775988 -0.451024'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.8995 -0.750966 0.0519271, -0.909828 -0.748693 0.0581145, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.909828 -0.748693 0.0581145, -0.921133 -0.746188 0.06212, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.396545 -0.786911 -0.472783, -0.303485 -0.807532 -0.505756, -0.351143 -0.795817 -0.49333'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.909828 -0.748693 0.0581145, -0.921133 -0.746188 0.06212, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.921133 -0.746188 0.06212, -0.93298 -0.743547 0.0637896, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.303485 -0.807532 -0.505756, -0.205962 -0.829276 -0.5195, -0.25505 -0.817178 -0.516885'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.921133 -0.746188 0.06212, -0.93298 -0.743547 0.0637896, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.93298 -0.743547 0.0637896, -0.944914 -0.74087 0.0630592, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.205962 -0.829276 -0.5195, -0.107723 -0.851309 -0.513488, -0.156346 -0.83925 -0.520784'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.93298 -0.743547 0.0637896, -0.944914 -0.74087 0.0630592, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.944914 -0.74087 0.0630592, -0.956476 -0.738262 0.0599569, -0.927051 -0.706044 0.00157321'/>
+    <Normal vector='-0.107723 -0.851309 -0.513488, -0.0125427 -0.872782 -0.48795, -0.0588233 -0.861185 -0.504876'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0.65 0' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.944914 -0.74087 0.0630592, -0.956476 -0.738262 0.0599569, -0.935243 -0.742637 0.00133722'/>
+    <Normal vector='-0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283, -0.218463 -0.975825 -0.00629283'/>
+  </IndexedFaceSet>
+</Shape>
+<Transform translation='-0.981667 -0.84375 0' center='0.0 -0.10625 0.0' rotation='0.596187 -0 0.802845  -1.74491'>
+  <Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+    <Cylinder bottom='false' height='0.2125' radius='0.03' side='true' top='false' />
+  </Shape>
+</Transform>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.835775 -0.946004 -0.16662, -0.841439 -0.955778 -0.171363, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.495824 -0.187385 0.847965, -0.449202 -0.106922 0.887009, -0.469916 -0.14983 0.869902'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.835775 -0.946004 -0.16662, -0.841439 -0.955778 -0.171363, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.841439 -0.955778 -0.171363, -0.846034 -0.966745 -0.174315, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.449202 -0.106922 0.887009, -0.411373 -0.0166405 0.911315, -0.427336 -0.0637397 0.901843'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.841439 -0.955778 -0.171363, -0.846034 -0.966745 -0.174315, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.846034 -0.966745 -0.174315, -0.849384 -0.978484 -0.175364, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.411373 -0.0166405 0.911315, -0.383792 0.0799887 0.919949, -0.394356 0.0305014 0.918452'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.846034 -0.966745 -0.174315, -0.849384 -0.978484 -0.175364, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.849384 -0.978484 -0.175364, -0.851361 -0.990542 -0.174469, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.383792 0.0799887 0.919949, -0.367517 0.179252 0.912579, -0.372244 0.129271 0.919088'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.849384 -0.978484 -0.175364, -0.851361 -0.990542 -0.174469, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.851361 -0.990542 -0.174469, -0.851889 -1.00246 -0.171664, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.367517 0.179252 0.912579, -0.363176 0.277336 0.889487, -0.361849 0.228775 0.90373'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.851361 -0.990542 -0.174469, -0.851889 -1.00246 -0.171664, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.851889 -1.00246 -0.171664, -0.850946 -1.01377 -0.167057, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.363176 0.277336 0.889487, -0.370934 0.370471 0.851563, -0.363572 0.325187 0.872966'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.851889 -1.00246 -0.171664, -0.850946 -1.01377 -0.167057, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.850946 -1.01377 -0.167057, -0.84857 -1.02405 -0.160825, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.370934 0.370471 0.851563, -0.390493 0.455077 0.800263, -0.377345 0.414805 0.827978'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.850946 -1.01377 -0.167057, -0.84857 -1.02405 -0.160825, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.84857 -1.02405 -0.160825, -0.844852 -1.0329 -0.153208, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.390493 0.455077 0.800263, -0.421102 0.527903 0.737558, -0.40264 0.494183 0.770496'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.84857 -1.02405 -0.160825, -0.844852 -1.0329 -0.153208, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.844852 -1.0329 -0.153208, -0.839934 -1.03997 -0.144498, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.421102 0.527903 0.737558, -0.461585 0.586151 0.665858, -0.438485 0.560271 0.702729'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.844852 -1.0329 -0.153208, -0.839934 -1.03997 -0.144498, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.839934 -1.03997 -0.144498, -0.834006 -1.045 -0.13503, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.461585 0.586151 0.665858, -0.510385 0.627582 0.587918, -0.483502 0.610529 0.62728'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.839934 -1.03997 -0.144498, -0.834006 -1.045 -0.13503, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.834006 -1.045 -0.13503, -0.827295 -1.0478 -0.125168, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.510385 0.627582 0.587918, -0.565628 0.650604 0.506735, -0.53596 0.643026 0.54705'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.834006 -1.045 -0.13503, -0.827295 -1.0478 -0.125168, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.827295 -1.0478 -0.125168, -0.82006 -1.04825 -0.115291, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.565628 0.650604 0.506735, -0.625189 0.654332 0.425427, -0.593845 0.656514 0.465121'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.827295 -1.0478 -0.125168, -0.82006 -1.04825 -0.115291, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.82006 -1.04825 -0.115291, -0.812578 -1.04635 -0.105778, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.625189 0.654332 0.425427, -0.686782 0.638622 0.347119, -0.654932 0.650473 0.384643'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.82006 -1.04825 -0.115291, -0.812578 -1.04635 -0.105778, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.812578 -1.04635 -0.105778, -0.805137 -1.04215 -0.0969952, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.686782 0.638622 0.347119, -0.748038 0.60408 0.274821, -0.716872 0.625136 0.308706'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.812578 -1.04635 -0.105778, -0.805137 -1.04215 -0.0969952, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.805137 -1.04215 -0.0969952, -0.798022 -1.03583 -0.0892801, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.748038 0.60408 0.274821, -0.806603 0.552032 0.211311, -0.777287 0.581476 0.240231'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.805137 -1.04215 -0.0969952, -0.798022 -1.03583 -0.0892801, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.798022 -1.03583 -0.0892801, -0.791508 -1.02762 -0.082929, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.806603 0.552032 0.211311, -0.860228 0.484477 0.159029, -0.833853 0.521172 0.181848'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.798022 -1.03583 -0.0892801, -0.791508 -1.02762 -0.082929, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.791508 -1.02762 -0.082929, -0.785844 -1.01785 -0.078186, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.860228 0.484477 0.159029, -0.90685 0.404014 0.119985, -0.884398 0.446541 0.135802'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.791508 -1.02762 -0.082929, -0.785844 -1.01785 -0.078186, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.785844 -1.01785 -0.078186, -0.781249 -1.00688 -0.0752334, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.90685 0.404014 0.119985, -0.944679 0.313732 0.0956791, -0.926978 0.360451 0.103861'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.785844 -1.01785 -0.078186, -0.781249 -1.00688 -0.0752334, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.781249 -1.00688 -0.0752334, -0.777898 -0.99514 -0.0741846, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.944679 0.313732 0.0956791, -0.97226 0.217103 0.0870455, -0.959958 0.26621 0.0872524'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.781249 -1.00688 -0.0752334, -0.777898 -0.99514 -0.0741846, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.777898 -0.99514 -0.0741846, -0.775921 -0.983082 -0.0750799, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.97226 0.217103 0.0870455, -0.988534 0.117839 0.0944159, -0.98207 0.16744 0.0866155'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.777898 -0.99514 -0.0741846, -0.775921 -0.983082 -0.0750799, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.775921 -0.983082 -0.0750799, -0.775394 -0.971167 -0.077885, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.988534 0.117839 0.0944159, -0.992876 0.0197553 0.117507, -0.992465 0.0679364 0.101974'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.775921 -0.983082 -0.0750799, -0.775394 -0.971167 -0.077885, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.775394 -0.971167 -0.077885, -0.776336 -0.959853 -0.082492, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.992876 0.0197553 0.117507, -0.985117 -0.0733791 0.155432, -0.990742 -0.0284764 0.132739'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.775394 -0.971167 -0.077885, -0.776336 -0.959853 -0.082492, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.776336 -0.959853 -0.082492, -0.778713 -0.949575 -0.0887239, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.985117 -0.0733791 0.155432, -0.965558 -0.157985 0.206732, -0.976968 -0.118094 0.177726'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.776336 -0.959853 -0.082492, -0.778713 -0.949575 -0.0887239, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.778713 -0.949575 -0.0887239, -0.782431 -0.940728 -0.0963412, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.965558 -0.157985 0.206732, -0.934949 -0.230811 0.269437, -0.951673 -0.197472 0.235208'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.778713 -0.949575 -0.0887239, -0.782431 -0.940728 -0.0963412, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.782431 -0.940728 -0.0963412, -0.787349 -0.933653 -0.105051, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.934949 -0.230811 0.269437, -0.894466 -0.289059 0.341137, -0.915829 -0.26356 0.302976'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.782431 -0.940728 -0.0963412, -0.787349 -0.933653 -0.105051, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.787349 -0.933653 -0.105051, -0.793277 -0.92862 -0.114519, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.894466 -0.289059 0.341137, -0.845666 -0.33049 0.419077, -0.870812 -0.313818 0.378424'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.787349 -0.933653 -0.105051, -0.793277 -0.92862 -0.114519, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.793277 -0.92862 -0.114519, -0.799988 -0.925823 -0.124381, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.845666 -0.33049 0.419077, -0.790424 -0.353511 0.50026, -0.818353 -0.346315 0.458655'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.793277 -0.92862 -0.114519, -0.799988 -0.925823 -0.124381, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.799988 -0.925823 -0.124381, -0.807223 -0.92537 -0.134258, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.790424 -0.353511 0.50026, -0.730862 -0.357239 0.581568, -0.760469 -0.359802 0.540583'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.799988 -0.925823 -0.124381, -0.807223 -0.92537 -0.134258, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.807223 -0.92537 -0.134258, -0.814705 -0.927278 -0.143771, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.730862 -0.357239 0.581568, -0.669269 -0.34153 0.659876, -0.699382 -0.353761 0.621062'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.807223 -0.92537 -0.134258, -0.814705 -0.927278 -0.143771, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.814705 -0.927278 -0.143771, -0.822146 -0.931475 -0.152554, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.669269 -0.34153 0.659876, -0.608013 -0.306987 0.732174, -0.637441 -0.328424 0.696998'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.814705 -0.927278 -0.143771, -0.822146 -0.931475 -0.152554, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.822146 -0.931475 -0.152554, -0.829261 -0.937797 -0.160269, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.608013 -0.306987 0.732174, -0.549448 -0.254939 0.795684, -0.577027 -0.284764 0.765473'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.822146 -0.931475 -0.152554, -0.829261 -0.937797 -0.160269, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.829261 -0.937797 -0.160269, -0.835775 -0.946004 -0.16662, -0.78399 -0.993308 -0.146793'/>
+    <Normal vector='-0.549448 -0.254939 0.795684, -0.495824 -0.187385 0.847966, -0.520461 -0.22446 0.823856'/>
+  </IndexedFaceSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0.65' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <IndexedFaceSet solid='false' coordIndex='0 1 2 -1'>
+    <Coordinate point='-0.829261 -0.937797 -0.160269, -0.835775 -0.946004 -0.16662, -0.813641 -0.986812 -0.124774'/>
+    <Normal vector='-0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174, -0.790707 0.173233 0.587174'/>
+  </IndexedFaceSet>
+</Shape>
+<Transform translation='-0.981667 -0.95 0'>
+  <Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0.1625 0.4875 0.4875' shininess='40' specularColor='0.5 0.5 0.5' transparency='0' /></Appearance>
+  <Sphere radius='0.03'/>
+  </Shape>
+</Transform>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0' emissiveColor='0.650 0.650 0.650' /></Appearance>
+  <IndexedLineSet coordIndex='0 1 -1 2 3 -1 '>
+    <Coordinate point=' -1.13898 -0.900523 -0.232207,-1.11423 -0.932023 -0.232207,-1.11423 -0.900523 -0.232207,-1.13898 -0.932023 -0.232207'/>
+  </IndexedLineSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0' emissiveColor='0.650 0.650 0.650' /></Appearance>
+  <IndexedLineSet coordIndex='0 1 -1 2 3 4 5 6 7 -1 '>
+    <Coordinate point=' -0.914495 -0.65881 0.00180525,-0.900995 -0.69031 0.00180525,-0.887495 -0.65881 0.00180525,-0.900995 -0.69031 0.00180525,-0.905495 -0.69931 0.00180525,-0.909995 -0.70381 0.00180525,-0.914495 -0.70606 0.00180525,-0.916745 -0.70606 0.00180525'/>
+  </IndexedLineSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0' emissiveColor='0.650 0.650 0.650' /></Appearance>
+  <IndexedLineSet coordIndex='0 1 -1 2 3 -1 4 5 -1 '>
+    <Coordinate point=' -0.723333 -0.988446 -0.168445,-0.748083 -1.01995 -0.168445,-0.748083 -0.988446 -0.168445,-0.723333 -0.988446 -0.168445,-0.748083 -1.01995 -0.168445,-0.723333 -1.01995 -0.168445'/>
+  </IndexedLineSet>
+</Shape>
+<!-- VMD: Done with axes. -->
+<!-- MoleculeID: 0 ReprID: 0 Beginning Lines -->
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0' emissiveColor='0 0 0.65' /></Appearance>
+  <IndexedLineSet coordIndex='0 1 -1 2 3 -1 4 5 -1 6 7 -1 8 9 -1 10 11 -1 '>
+    <Coordinate point=' 0.317071 -0.066318 -0.00153804,0.292118 -0.197342 0.0926247,0.317071 -0.066318 -0.00153804,0.407904 -0.0831032 -0.0824695,0.317071 -0.066318 -0.00153804,0.218607 0.0825389 -0.00465441,-0.464998 0.0630733 0.0804367,-0.358618 0.13277 -0.0214264,-0.464998 0.0630733 0.0804367,-0.428817 0.0169337 0.188271,-0.464998 0.0630733 0.0804367,-0.640771 0.0540591 0.0483069'/>
+  </IndexedLineSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0' emissiveColor='0.65 0 0' /></Appearance>
+  <IndexedLineSet coordIndex='0 1 -1 2 3 -1 '>
+    <Coordinate point=' 0.0626349 -0.328155 0.407376,0.1649 -0.32826 0.297081,-0.343409 0.328246 -0.381298,-0.297823 0.265356 -0.252294'/>
+  </IndexedLineSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0' emissiveColor='0.65 0.65 0.65' /></Appearance>
+  <IndexedLineSet coordIndex='0 1 -1 2 3 -1 4 5 -1 6 7 -1 8 9 -1 10 11 -1 12 13 -1 14 15 -1 16 17 -1 18 19 -1 20 21 -1 22 23 -1 '>
+    <Coordinate point=' 0.766072 -0.495534 0.181237,0.645217 -0.55461 0.15606,0.539711 -0.689109 -0.131474,0.532037 -0.651397 -0.000296116,0.467544 -0.841079 0.271999,0.495953 -0.727382 0.201441,0.498736 -0.0998886 -0.163401,0.407904 -0.0831032 -0.0824695,0.113937 0.293948 0.250569,0.117039 0.262672 0.121399,0.290943 0.420308 -0.486409,0.288827 0.466759 -0.357872,0.182144 0.762946 -0.18887,0.234428 0.638078 -0.209102,0.550488 0.540269 -0.161807,0.418599 0.52674 -0.19557,-0.392635 -0.0292059 0.296105,-0.428817 0.0169337 0.188271,-0.887195 -0.178185 -0.125489,-0.851869 -0.0665698 -0.054656,-0.931031 0.267694 -0.0938177,-0.873787 0.156369 -0.0388207,-0.899611 0.00092341 0.272932,-0.858077 0.0229843 0.144554'/>
+  </IndexedLineSet>
+</Shape>
+<Shape>
+  <Appearance><Material ambientIntensity='0' diffuseColor='0 0 0' emissiveColor='0.1625 0.4875 0.4875' /></Appearance>
+  <IndexedLineSet coordIndex='0 1 -1 2 3 -1 4 5 -1 6 7 -1 8 9 -1 10 11 -1 12 13 -1 14 15 -1 16 17 -1 18 19 -1 20 21 -1 22 23 -1 24 25 -1 26 27 -1 28 29 -1 30 31 -1 32 33 -1 34 35 -1 36 37 -1 '>
+    <Coordinate point=' 0.524362 -0.613686 0.130882,0.645217 -0.55461 0.15606,0.524362 -0.613686 0.130882,0.532037 -0.651397 -0.000296116,0.524362 -0.613686 0.130882,0.495953 -0.727382 0.201441,0.524362 -0.613686 0.130882,0.267165 -0.328365 0.186787,0.267165 -0.328365 0.186787,0.292118 -0.197342 0.0926247,0.267165 -0.328365 0.186787,0.1649 -0.32826 0.297081,0.120142 0.231396 -0.00777078,0.218607 0.0825389 -0.00465441,0.120142 0.231396 -0.00777078,0.117039 0.262672 0.121399,0.120142 0.231396 -0.00777078,0.286711 0.51321 -0.229334,0.120142 0.231396 -0.00777078,-0.252238 0.202466 -0.12329,0.286711 0.51321 -0.229334,0.288827 0.466759 -0.357872,0.286711 0.51321 -0.229334,0.234428 0.638078 -0.209102,0.286711 0.51321 -0.229334,0.418599 0.52674 -0.19557,-0.252238 0.202466 -0.12329,-0.358618 0.13277 -0.0214264,-0.252238 0.202466 -0.12329,-0.297823 0.265356 -0.252294,-0.816543 0.045045 0.0161767,-0.640771 0.0540591 0.0483069,-0.816543 0.045045 0.0161767,-0.851869 -0.0665698 -0.054656,-0.816543 0.045045 0.0161767,-0.873787 0.156369 -0.0388207,-0.816543 0.045045 0.0161767,-0.858077 0.0229843 0.144554'/>
+  </IndexedLineSet>
+</Shape>
+</Scene>
+</X3D>

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block styles %} 
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style_explication.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1><b>Molecular Simulation </b></h1>
+                All molecular simulations were performed with the openmm software within its python API. 
+                The trajectory that you can see below were simulated under Langevin dynamics at a temperature 300K, non periodic conditions with cutoff rc = 1nm, a friction coefficient equal 1 ps<sup>-1</sup>
+                , no bond constraints and a timestep equal 1 fs. This configuration is obtained after 25000 steps of energy
+                minimization.<br>
+                At the end of the simulation with openmm, we store the positions of the 22 atoms that 
+                constitutes the alanine dipeptide molecule for 2500 times. 
+                <br> We generate the movie with VMD and VideoMatch softwares.
+                
+            </div>
+            <div class="col-md-3">
+                <video class="tab" controls>
+                <source src="/static/video/visu-traj.mp4" type="video/mp4">
+            </video>
+            </div>
+            <div class = "col-md-3"></div>
+            <div class=" col-md-3 list-group">
+                <a href="/explication" class="list-group-item list-group-item-action" aria-current="true">Introduction</a>
+                <a href="/explication/1" class="list-group-item list-group-item-action active"> Molecular Simulation </a>
+                <a href="/explication/2" class="list-group-item list-group-item-action">Neural Network Training</a>
+                <a href="/explication/3" class="list-group-item list-group-item-action"> Quality of CVs </a>
+                <a href="/explication/4" class="list-group-item list-group-item-action"> Ball is in your court !</a>
+            </div>
+    
+        </div>
+  
+        <div class="row">
+            <div class="jumbotron">
+                    <h1>Openmm and VMD </h1>
+
+                <p>OpenMM is a toolkit for molecular simulation. It can be used either as a stand-alone application for running simulations, or as a library you call from your own code. It provides a combination of extreme flexibility (through custom forces and integrators), openness, and high performance (especially on recent GPUs) that make it truly unique among simulation codes.
+                
+                Visual Molecular Dynamics (VMD) is a molecular modelling and visualization computer program. VMD is developed as mainly a tool to view and analyze the results of molecular dynamics simulations. It also includes tools for working with volumetric data, sequence data, and arbitrary graphics objects.
+                <br>
+                <br>You can find more information and some tutorials by clicking on the button below.</p>
+
+                <p><a class="btn btn-primary" href="https://openmm.org/"> Know More about Openmm </a></p>
+                <p><a class="btn btn-danger" href="https://www.ks.uiuc.edu/Research/vmd/"> Know More about VMD </a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        20%
+                        <!--<span class="sr-only">20% Complete</span>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <a href='/explication' type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="col-md-8"></div>
+
+            <div class="col-md-2">
+                <a href="/explication/2" type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>   
+        </div>
+    </div>
+</div>
+
+{% endblock %}

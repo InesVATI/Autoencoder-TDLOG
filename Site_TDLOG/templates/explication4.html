@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block styles %} 
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style_explication.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1><b> The ball is in your court ! </b></h1>
+                Enter the number of the atoms: 
+            </div>
+            <div class="col-md-2"></div>
+            <div class=" col-md-3 list-group">
+                <a href="/explication" class="list-group-item list-group-item-action" aria-current="true"> Introduction</a>
+                <a href="/explication/1" class="list-group-item list-group-item-action"> Molecular Simulation </a>
+                <a href="/explication/2" class="list-group-item list-group-item-action">Neural Network Training</a>
+                <a href="/explication/3" class="list-group-item list-group-item-action "> Quality of CVs </a>
+                <a href="/explication/4" class="list-group-item list-group-item-action active"> Ball is in your court !</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Compute the Ramachandran plot</h2>
+            <form action="#" method="post">
+              <label for="phi"> Define &phi; angle</label><br>
+              <input type="text" id="phi_atom1" name="atom1" value="Enter an integer">
+              <input type="text" id="phi_atom2" name="atom2" value="Enter an integer">
+              <input type="text" id="phi_atom3" name="atom3" value="Enter an integer">
+              <input type="text" id="phi_atom4" name="atom4" value="Enter an integer"><br>
+            </form>
+        </div>
+        <div class="row">
+            <form action="#" method="post">
+              <label for="psi">Define &psi; angle</label><br>
+              <input type="text" id="psi_atom1" name="atom1" value="Enter an integer">
+              <input type="text" id="psi_atom2" name="atom2" value="Enter an integer">
+              <input type="text" id="psi_atom3" name="atom3" value="Enter an integer">
+              <input type="text" id="psi_atom4" name="atom4" value="Enter an integer">
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        100%
+                        <span class="sr-only">100% Complete</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-2">
+                  <a href='/explication/3' type="button" class="btn btn-primary">
+                      <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+                  </a>
+              </div>
+          </div>
+    </div>
+</div>
+
+{% endblock %}

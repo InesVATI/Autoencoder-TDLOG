@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block styles %} 
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style_visualisation.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="visualisation">
+    {% if formulaire_rempli %}
+    <div class="container">
+      You chose to visualize the results on the {{choix["molecule"]}} molecule.
+      <div class="row">
+        <div class="col-md-3">
+        The {{choix["molecule"]}} molecule
+          <script>
+            jmolApplet(400, "load {{url}}" , "0" )
+          </script>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+          <iframe src="/static/plot/plot3D.html" width="800" height="800" frameborder="1"></iframe>
+        </div>
+      </div>
+      <div class="row">
+        Here is the trajectory simulated which represents the data on which we will train our autoencoder
+        <img src='/static/img/test.png' alt="The trajectory simulated which represents the data on which we will train our autoencoder" height=200px />
+      </div>
+    </div>
+      <!--<div w3-include-html={{path}}></div>-->
+      <!--<script src="/static/js/index.js"></script>-->
+    
+    {% else %}
+    {{choix_modelisation}}
+    <div class="container">
+    <h2>Form</h2>
+    This is the page where you apply our project results! <br>
+    First off, start be choosing the molecule you want to work with. <br>
+    <div class="form-container">
+      <form action="#" method="post">
+        <div class="row">
+          <label for="molecule">Please choose a molecule</label>
+          <input type="text" class="form-control" name="molecule" placeholder="caffeine">
+        </div>
+        <div class="row">
+          <label for="molecule">Please choose beta for the simulation ( beta = 1/kBT where kB is the Boltzmann constant )</label>
+          <input type="int" class="form-control" name="beta" placeholder="1">
+        </div>
+        <div class="row">
+          <label for="number">Please choose the number of high potential areas you wish to implement</label>
+          <select class="form-control" name="number">
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="bowl1">Please enter the coordinates for the first high potential</label>
+          <div class="col">
+            <input type="text" class="form-control" name="bowl1xy" placeholder="x0;y0">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl1r" placeholder="r">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl1a" placeholder="a">
+          </div>
+        </div>
+        <div class="row">
+          <label for="bowl2">Please enter the coordinates for the second high potential</label>
+          <div class="col">
+            <input type="text" class="form-control" name="bowl2xy" placeholder="x0;y0">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl2r" placeholder="r">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl2a" placeholder="a">
+          </div>
+        </div>
+        <div class="row">
+          <label for="bowl3">Please enter the coordinates for the third high potential</label>
+          <div class="col">
+            <input type="text" class="form-control" name="bowl3xy" placeholder="x0;y0">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl3r" placeholder="r">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl3a" placeholder="a">
+          </div>
+        </div>
+        <div class="row">
+          <label for="bowl4">Please enter the coordinates for the fourth high potential</label>
+          <div class="col">
+            <input type="text" class="form-control" name="bowl" placeholder="x0;y0">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl1r" placeholder="r">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl1a" placeholder="a">
+          </div>
+        </div>
+        <div class="row">
+          <label for="bowl5">Please enter the coordinates for the fifth high potential</label>
+          <div class="col">
+            <input type="text" class="form-control" name="bowl" placeholder="x0;y0">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl1r" placeholder="r">
+          </div>
+          <div class="col">
+            <input type="float" class="form-control" name="bowl1a" placeholder="a">
+          </div>
+        </div>
+        <input type="submit" value="Lancer la modélisation">
+      </form>
+    </div>
+  </div>
+    
+ <div class="visualisation-box">
+       <!--<x3d  id="the_one">
+        <scene>
+        <inline url="{{url_for('static', filename='/x3d/chignolin.x3d')[1:]}}"></inline>
+        </scene>
+      </x3d>-->
+  
+</div>
+
+</div>
+
+{% endif %}
+
+</div>
+
+{% endblock %}
