@@ -13,8 +13,12 @@
                 First, note that collective variables of two dimension are obtained by applying the encoder to a given conformation of the molecule.
                 We want now to assess the quality of our CVs. <br>
                 We know that dihedral angles &phi; and &psi; can caracterize the secondary structure of a protein. It would be interesting to investigate the relation between the collective variables obtained by our autoencoders and these two angles.
-                <br> In order to have fun you can click on this <a href="http://bioinformatics.org/molvis/phipsi/">link</a>
-                <img class ="wp-block-image" src="/static/img/alanine angle.png" alt="alanine dipeptide" >  
+               
+                <div class="alert alert-success" role="alert">
+                    If you want to have fun and better uderstand those concepts, you can click on this <a href="http://bioinformatics.org/molvis/phipsi/" class="alert-link">link </a>.<br>
+                    Check it out, it's worth a look !
+                  </div>
+                <img class ="wp-block-image" src="/static/img/alanine angle.png" alt="alanine dipeptide" width="500" height="400">  
             </div>
             <div class="col-md-3"></div>
             <div class=" col-md-3 list-group">
@@ -26,12 +30,15 @@
             </div>
         </div>
         
-        <div class="row">
-            <p>Here is the ramachandran plot we have obtained</p>
+        <div class="row"> 
+            <p>In biochemistry, a Ramachandran plot (also known as a Rama plot, a Ramachandran diagram or a [&phi;,&psi;] plot) 
+                is a way to visualize energetically allowed regions for backbone dihedral angles &psi; against &phi; of amino acid residues in protein structure.</p>
+            <p>Here is the ramachandran plot we have obtained by computing the angle thanks to mdtraj module.</p>
             <div class ="col-md-3">
                 <img class ="wp-block-image" src="/static/img/ramachandran.png"  alt="ramach">
             </div>
         </div>
+        <p>In the next step, you will try it out !</p>
         <div class="row">
             <div class="col">
                 <div class="progress">

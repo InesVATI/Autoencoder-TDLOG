@@ -17,7 +17,7 @@
                         <p>Ouch, You might have written a string or a non-integer value that raised a ValueError exceptions. You should make another choice
                             and make sure you have entered an interger between 1 and 23.</p>
                         <hr>
-                        Fill all the cases correctly!
+                        <p>Fill all the boxes correctly! </p>
                         <a href='/explication/4' class="btn btn-lg btn-danger" role="button" data-bs-toggle="button" > Try again ! </a>
                     </div>
                 {% else %}
@@ -42,7 +42,8 @@
             Your Ramachandran plot is displayed below. Drag your cursor on the graph!
              
             <iframe src= "/static/templates/rama_user.html" width="600" height="600" ></iframe>
-           <p> You can also see the evolution according to time of the conformation (represented by dihedral angles)
+            <p>If all the points are on a same line or column, that means you've entered at least two same atom to define one of your angle. That is not correct!</p>
+            <p>You can also see the evolution according to time of the conformation (represented by dihedral angles)
             Play with the slider. To fix the axes press the stop button and then the start one. Hope you will enjoy !</p>
             <iframe src="/static/templates/rama_frame.html" width="600" height="600" ></iframe>
 
@@ -54,6 +55,7 @@
             </div>
             <div class="row">
                 <h2>Map out the Ramachandran plot</h2>
+                <p>Enter a number between 1 and 23 in each box.</p>
                 <p>If you don't know what to choose you can start with [5, 7, 9, 15] for &phi; and  [7, 9, 15, 17] for &psi;.</p>
             </div>
             <div class="form-container">
@@ -96,6 +98,7 @@
             </div>
 
         {% endif %}
+        
             <div class="row">
                 <div class="col">
                     <div class="progress">

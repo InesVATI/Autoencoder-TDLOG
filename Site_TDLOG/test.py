@@ -169,7 +169,7 @@ def visualisation():
 def explication():
     """ Vizualisation of our work during MOPSI project """
     current_user.tuto0=True
-    return render_template('explication.html', title='Explanation')
+    return render_template('explication0.html', title='Explanation')
 
 
 @app.route('/profil/<string:username>/<string:status>')
@@ -214,7 +214,8 @@ def explication3():
 @app.route('/explication/4', methods=['GET', 'POST'])
 def explication4():
     """ Display the last step of the tutorial 
-        The user can choose the atoms and plot the correcponding Rama plot """
+        The user can choose the atoms and plot the correcponding Rama plot 
+        Display an error message if the user didn't fill the cases correctly """
 
     current_user.tuto4=True
     if current_user.tuto4:
@@ -223,13 +224,12 @@ def explication4():
 
     if request.method == 'POST':
         try :
-            phi_atom = [int(request.form['phi_atom1']), int(request.form['phi_atom2']), int(request.form['phi_atom3']), int(request.form['phi_atom4'])]
-            psi_atom = [int(request.form['psi_atom1']), int(request.form['psi_atom2']), int(request.form['psi_atom3']), int(request.form['psi_atom4'])]
-            
+            phi_atom = [int(request.form['phi_atom1'])-1, int(request.form['phi_atom2'])-1, int(request.form['phi_atom3'])-1, int(request.form['phi_atom4'])-1]
+            psi_atom = [int(request.form['psi_atom1'])-1, int(request.form['psi_atom2'])-1, int(request.form['psi_atom3'])-1, int(request.form['psi_atom4'])-1]
+            fig = rama.rama_plot(phi_atom, psi_atom)
         except ValueError:
             return render_template('explication4.html', title='Explanation', url=url, error=True, completed_form=False)
         
-        fig = rama.rama_plot(phi_atom, psi_atom)
         fig.write_html('static/templates/rama_user.html',full_html=False,include_plotlyjs='cdn')
         anim_fig = rama.rama_frame(phi_atom, psi_atom)
         anim_fig.write_html('static/templates/rama_frame.html', full_html=False,include_plotlyjs='cdn')
