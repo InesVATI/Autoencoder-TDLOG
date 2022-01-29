@@ -11,20 +11,32 @@
         <div class="row">
             <div class="col-md-7">
                 <h1><b> The ball is in your court ! </b></h1>
-                You can play with the alanine dipeptide molecule displayed below. 
-                    <script>
-                        jmolApplet(400, "load {{url}}" , "0" )
-                    </script>
+                {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        <h1>Something went wrong!</h1>
+                        <p>Ouch, You might have written a string or a non-integer value that raised a ValueError exceptions. You should make another choice
+                            and make sure you have entered an interger between 1 and 23.</p>
+                        <hr>
+                        Fill all the cases correctly!
+                        <a href='/explication/4' class="btn btn-lg btn-danger" role="button" data-bs-toggle="button" > Try again ! </a>
+                    </div>
+                {% else %}
+                    You can play with the alanine dipeptide molecule displayed below. 
+                        <script>
+                            jmolApplet(500, "load {{url}}" , "0" )
+                        </script>
+                {% endif %}
             </div>
+            
             <div class=" col-md-3 list-group">
-                <a href="/explication" class="list-group-item list-group-item-action" aria-current="true"> Introduction</a>
+                <a href="/explication/0" class="list-group-item list-group-item-action" aria-current="true"> Introduction</a>
                 <a href="/explication/1" class="list-group-item list-group-item-action"> Molecular Simulation </a>
                 <a href="/explication/2" class="list-group-item list-group-item-action">Neural Network Training</a>
                 <a href="/explication/3" class="list-group-item list-group-item-action "> Quality of CVs </a>
                 <a href="/explication/4" class="list-group-item list-group-item-action active"> Ball is in your court !</a>
             </div>
         </div>
-
+        
         {% if completed_form %}
 
             Your Ramachandran plot is displayed below. Drag your cursor on the graph!
@@ -77,38 +89,9 @@
                         </div>
                     </div>
 
-                    <div class="js-page">
-                        <main class="js-document">
-
                     <div class="wp-block-image">
-                        <input role="button" aria-haspopup="dialog" aria-controls="dialog" type="submit" class="form-control" value="Launch Computation">
+                        <input type="submit" class="form-control" value="Launch Computation">
                     </div>
-                    </main>
-                    {% if error %}
-                    
-                    <div
-                        id="dialog"
-                        role="dialog"
-                        aria-labelledby="dialog-title"
-                        aria-describedby="dialog-desc"
-                        aria-modal="true"
-                        aria-hidden="true"
-                        tabindex="-1"
-                        class="c-dialog">
-                        <div role="document" class="c-dialog__box">
-                            <h2 id="dialog-title">Ma fenêtre modale</h2>
-                            <p id="dialog-desc">Je suis une fenêtre modale accessible.</p>
-                        </div>
-                        <button 
-                            type="button" 
-                            aria-label="Fermer"
-                            title="Fermer cette fenêtre modale"
-                            data-dismiss="dialog">X
-                        </button>
-                    </div>
-                    </div>
-                    <script src="/static/js/error_handle.js"></script>
-                {% endif %}
                 </form>
             </div>
 
@@ -122,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="wp-block-image">
                 <a href='/explication/3'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                     <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>

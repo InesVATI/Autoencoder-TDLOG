@@ -3,38 +3,7 @@
     vertical-align: bottom;
 }
 
-.jumbotron{
-  background-color: azure;
+.jumbo{
+  background-color: rgb(110, 133, 133);
   margin: 20px;
 }
-
-.c-dialog {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  padding: 2.4rem;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(black, .75);
-}
-
-.c-dialog__box {
-  flex: 1;
-  max-width: 48rem;
-  margin: auto;
-  padding: 2.4rem;
-  background-color: white;
-}
-
-.c-dialog[aria-hidden="true"] {
-  visibility: hidden;
-  opacity: 0;
-}
-
-
-
-

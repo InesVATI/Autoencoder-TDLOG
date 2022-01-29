@@ -165,8 +165,9 @@ def visualisation():
         
     return render_template('visualisation.html', title='Visualisation', formulaire_rempli=False)
 
-@app.route('/explication', methods=['GET','POST'])
+@app.route('/explication/0', methods=['GET','POST'])
 def explication():
+    """ Vizualisation of our work during MOPSI project """
     current_user.tuto0=True
     return render_template('explication.html', title='Explanation')
 
@@ -185,6 +186,8 @@ def profil_tutorial(username,status):
 
 @app.route('/explication/1')
 def explication1():
+    """ Vizualisation of our work during MOPSI project """
+
     current_user.tuto1=True
     if current_user.tuto1:
         print("L'uilisateur a fait le tuto1")
@@ -192,6 +195,8 @@ def explication1():
 
 @app.route('/explication/2')
 def explication2():
+    """ Vizualisation of our work during MOPSI project """
+
     current_user.tuto2=True
     if current_user.tuto2:
         print("L'uilisateur a fait le tuto2")
@@ -199,6 +204,8 @@ def explication2():
 
 @app.route('/explication/3')
 def explication3():
+    """ Vizualisation of our work during MOPSI project """
+
     current_user.tuto3=True
     if current_user.tuto3:
         print("L'uilisateur a fait le tuto3")
@@ -208,6 +215,7 @@ def explication3():
 def explication4():
     """ Display the last step of the tutorial 
         The user can choose the atoms and plot the correcponding Rama plot """
+
     current_user.tuto4=True
     if current_user.tuto4:
         print("L'uilisateur a fait le tuto4")
@@ -217,16 +225,16 @@ def explication4():
         try :
             phi_atom = [int(request.form['phi_atom1']), int(request.form['phi_atom2']), int(request.form['phi_atom3']), int(request.form['phi_atom4'])]
             psi_atom = [int(request.form['psi_atom1']), int(request.form['psi_atom2']), int(request.form['psi_atom3']), int(request.form['psi_atom4'])]
-            fig = rama.rama_plot(phi_atom, psi_atom)
-            fig.write_html('static/templates/rama_user.html',full_html=False,include_plotlyjs='cdn')
-            anim_fig = rama.rama_frame(phi_atom, psi_atom)
-            anim_fig.write_html('static/templates/rama_frame.html', full_html=False,include_plotlyjs='cdn')
+            
         except ValueError:
             return render_template('explication4.html', title='Explanation', url=url, error=True, completed_form=False)
+        
+        fig = rama.rama_plot(phi_atom, psi_atom)
+        fig.write_html('static/templates/rama_user.html',full_html=False,include_plotlyjs='cdn')
+        anim_fig = rama.rama_frame(phi_atom, psi_atom)
+        anim_fig.write_html('static/templates/rama_frame.html', full_html=False,include_plotlyjs='cdn')
+        return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=True)  
 
-        return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=True)
-
-   
     return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=False)
 
 @app.route('/explication/codeNN')
