@@ -183,7 +183,6 @@ def profil_change_parameters(username,status):
 def profil_tutorial(username,status):
     return render_template('profil_tutorial.html', username=username, status=status, title="Tutorial")
 
-
 @app.route('/explication/1')
 def explication1():
     current_user.tuto1=True
@@ -223,18 +222,19 @@ def explication4():
             anim_fig = rama.rama_frame(phi_atom, psi_atom)
             anim_fig.write_html('static/templates/rama_frame.html', full_html=False,include_plotlyjs='cdn')
         except ValueError:
-            return 'ValueError'
-            #return render_template('explication4.html', title='Explanation', url=url, completed_form=False)
+            return render_template('explication4.html', title='Explanation', url=url, error=True, completed_form=False)
 
-        return render_template('explication4.html', title='Explanation', url=url, completed_form=True)
+        return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=True)
 
    
-    return render_template('explication4.html', title='Explanation', url=url, completed_form=False)
+    return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=False)
 
 @app.route('/explication/codeNN')
 def codeAE():
-    return render_template('TrainingAE.html')
+    """ Show one of the notebooks we use in our MOPSI project
+        This show thetraining for a 3D trajectory  """
 
+    return render_template('TrainingAE.html')
 
 
 if __name__ == "__main__":

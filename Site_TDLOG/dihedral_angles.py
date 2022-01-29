@@ -3,8 +3,6 @@ import mdtraj as md
 import plotly.express as px
 import pandas as pd
 
-
-
 traj = md.load('clear_traj.pdb')
 atoms, bonds = traj.topology.to_dataframe()
 
