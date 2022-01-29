@@ -1,6 +1,7 @@
 from flask import Flask, url_for, redirect, render_template, request
 import numpy as np
 import potentials as pt
+import dihedral_angles as rama
 import sqlite3
 import click
 from flask import Flask, url_for, abort, redirect, render_template, request, current_app, g, flash
@@ -166,7 +167,7 @@ def visualisation():
 
 @app.route('/explication', methods=['GET','POST'])
 def explication():
-    current_user.change_tuto(0)
+    current_user.tuto0=True
     return render_template('explication.html', title='Explanation')
 
 
@@ -206,21 +207,33 @@ def explication3():
 
 @app.route('/explication/4', methods=['GET', 'POST'])
 def explication4():
+    """ Display the last step of the tutorial 
+        The user can choose the atoms and plot the correcponding Rama plot """
     current_user.tuto4=True
     if current_user.tuto4:
         print("L'uilisateur a fait le tuto4")
+    url=fetch_url("dialanine")
+
     if request.method == 'POST':
-        phi_atom1 = request.form['phi_atom1']
-        phi_atom2 = request.form['phi_atom2']
-        phi_atom3 = request.form['phi_atom3']
-        phi_atom4 = request.form['phi_atom4']
-       # phi_angle = np.array([int(phi_atom1), int(phi_atom2), int(phi_atom3), int(phi_atom4)])
-    return render_template('explication4.html', title='Explanation')
+        try :
+            phi_atom = [int(request.form['phi_atom1']), int(request.form['phi_atom2']), int(request.form['phi_atom3']), int(request.form['phi_atom4'])]
+            psi_atom = [int(request.form['psi_atom1']), int(request.form['psi_atom2']), int(request.form['psi_atom3']), int(request.form['psi_atom4'])]
+            fig = rama.rama_plot(phi_atom, psi_atom)
+            fig.write_html('static/templates/rama_user.html',full_html=False,include_plotlyjs='cdn')
+            anim_fig = rama.rama_frame(phi_atom, psi_atom)
+            anim_fig.write_html('static/templates/rama_frame.html', full_html=False,include_plotlyjs='cdn')
+        except ValueError:
+            return 'ValueError'
+            #return render_template('explication4.html', title='Explanation', url=url, completed_form=False)
+
+        return render_template('explication4.html', title='Explanation', url=url, completed_form=True)
+
+   
+    return render_template('explication4.html', title='Explanation', url=url, completed_form=False)
 
 @app.route('/explication/codeNN')
 def codeAE():
     return render_template('TrainingAE.html')
-
 
 
 
