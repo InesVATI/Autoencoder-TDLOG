@@ -1,17 +1,20 @@
+import os
+
 from flask import Flask, url_for, redirect, render_template, request, flash
-import numpy as np
-import potentials as pt
-from datetime import datetime
-import dihedral_angles as rama
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import InputRequired, Length, ValidationError
 from flask_login import UserMixin, login_user, LoginManager, logout_user, current_user
 from flask_bcrypt import Bcrypt
-import os
+
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, Length, ValidationError
 import requests
+import numpy as np
+import datetime as datetime
+
 import autoencoders as ae
+import dihedral_angles as rama
+import potentials as pt
 
 N=1000
 
