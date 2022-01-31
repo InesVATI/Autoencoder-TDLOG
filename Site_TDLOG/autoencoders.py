@@ -43,10 +43,6 @@ class DeepAutoEncoder(nn.Module):
             torch.nn.Tanh(),
             torch.nn.Linear(hidden_dims[1], hidden_dims[2]),
             torch.nn.Tanh(),
-            # torch.nn.Linear(hidden_dims[2], hidden_dims[3]),
-            # torch.nn.Tanh(),
-            # torch.nn.Linear(hidden_dims[3], hidden_dims[4]),
-            # torch.nn.Tanh(),
             torch.nn.Linear(hidden_dims[-1], bottleneck_dim),
             torch.nn.Tanh()
         )
@@ -57,10 +53,6 @@ class DeepAutoEncoder(nn.Module):
             torch.nn.Tanh(),
             torch.nn.Linear(hidden_dims[-2], hidden_dims[-3]),
             torch.nn.Tanh(),
-            # torch.nn.Linear(hidden_dims[-3], hidden_dims[-4]),
-            # torch.nn.Tanh(),
-            # torch.nn.Linear(hidden_dims[-4], hidden_dims[-5]),
-            # torch.nn.Tanh(),
             torch.nn.Linear(hidden_dims[0], input_dim),
         )
 
@@ -189,6 +181,13 @@ def grad_xi_ae(model, x):
     return grad.detach().numpy()
 
 def plot_results(potential, trajectory):
+    """
+        :param potential:  MultimodalPotential, potential
+        :param trajectory: np.array
+
+        :return: Fig1: Figure, training and test losses plots
+        :return: Fig2: Figure, Collective variables plots
+        """
     learning_rate = 0.005
     batch_size = 100
     num_epochs = 20

@@ -38,6 +38,8 @@ def fetch_url(name):
         create the url that leads to the sdf file in the pubchem dataset
 
         :param name: string, molecule's name the user had entered
+
+        :return: the url that leads to the sdf file 
         """
     url="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/"+name+"/SDF?record_type=3d"
     return url
@@ -135,7 +137,7 @@ def index():
 @app.route('/visualisation',  methods=['GET','POST'])
 def visualisation():
     if request.method == "POST":
-        errors = False
+        errors = False #tracking the errors 
         molecule = request.form['molecule']
         try:
             beta = int(request.form['beta'])
@@ -189,7 +191,7 @@ def visualisation():
 
         url = fetch_url(molecule)
         response = requests.get(url)
-        if response.status_code != 200:
+        if response.status_code != 200: #the url doesn't exist
             flash(f"The molecule {molecule} you looked for seems as if it doesn't exist in the database. Make sure it is spelled correctly !")
             errors = True
 
