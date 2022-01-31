@@ -13,7 +13,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 import requests
 import numpy as np
-import datetime as datetime
+from datetime import datetime
 
 #----Modules that we wrote 
 import potentials as pt

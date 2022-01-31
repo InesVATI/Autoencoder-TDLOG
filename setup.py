@@ -7,5 +7,5 @@ setup(
     description = 'Dimension reduction for molecular dynamics by using autoencoders',
     author='Akhannouss Boyer Vati',
     packages=find_packages(),
-    install_requires=['flask', 'numpy', 'datetime', 'flask_sqlalchemy', 'flask_wtf', 'flask_login', 'flask_bcrypt', 'wtforms', 'requests', 'datetime', 'matplotlib', 'scipy', 'plotly', 'pytorch', 'scikit-learn']
+    install_requires=['flask', 'numpy', 'datetime', 'flask_sqlalchemy', 'flask_wtf', 'flask_login', 'flask_bcrypt', 'wtforms', 'requests', 'matplotlib', 'scipy', 'plotly', 'pytorch', 'scikit-learn', 'mdtraj']
 )
