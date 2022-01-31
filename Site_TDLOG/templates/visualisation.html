@@ -30,6 +30,20 @@
         Here is the trajectory simulated which represents the data on which we will train our autoencoder. On the left, we can observe the trajectory of the molecule. On the right, wa can observe the progression of the x coordinates through the time.
         <img src={{traj_path}} alt="The trajectory simulated which represents the data on which we will train our autoencoder" height=350px />
       </div>
+      <div> 
+        We consider two models: <br>
+          - SimpleAutoEncoder which corresponds to the simplest possible autoencoder going directly from the input to the bottleneck and then to the output<br>
+          - DeepAutoEncoder which allows to consider more hidden layers<br>
+        Here are the results of the training simulation:
+        <div class="row justify-content-center">
+          The losses generated while training our autoencoders:
+          <img src={{loss_path}} alt="The losses generated while training our autoencoders" height=350px />
+        </div>
+        <div class="row justify-content-center">
+          The reaction coordinates:
+          <img src={{rc_path}} alt="The reaction coordinates" height=350px />
+        </div>
+      </div>
     </div>
 
     {% else %}
@@ -155,16 +169,6 @@
       </form>
     </div>
   </div>
-    
- <div class="visualisation-box">
-       <!--<x3d  id="the_one">
-        <scene>
-        <inline url="{{url_for('static', filename='/x3d/chignolin.x3d')[1:]}}"></inline>
-        </scene>
-      </x3d>-->
-  
-</div>
-
 </div>
 
 {% endif %}

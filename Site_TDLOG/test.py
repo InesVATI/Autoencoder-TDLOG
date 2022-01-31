@@ -3,7 +3,7 @@ import numpy as np
 import potentials as pt
 from datetime import datetime
 from flask import Flask, url_for, redirect, render_template, request,  flash
-import dihedral_angles as rama
+#import dihedral_angles as rama
 import sqlite3
 import click
 from flask import Flask, url_for, abort, redirect, render_template, request, current_app, g, flash
@@ -15,6 +15,7 @@ from flask_login import UserMixin, login_user, LoginManager, logout_user, curren
 from flask_bcrypt import Bcrypt
 import os
 import requests
+import autoencoders as ae
 
 N=1000
 
@@ -195,20 +196,39 @@ def visualisation():
             bowl=np.array(bowls)
             potential=pt.MultimodalPotential(bowl, beta)
             fig_pot=pt.create_plots(potential)
+            trajectory, _ = pt.UnbiasedTraj(potential)
+            fig_traj=pt.plot_trajectory(potential, trajectory)
+            fig_loss, fig_rc = ae.plot_results(potential, trajectory)
             now = datetime.now() # current date and time to identify plots
             date_time = now.strftime("%m%d%Y%H%M%S%f")
+
+            #creating paths
             path_plot_pot ='static\\plot\\plot3D'+date_time+'.html' #path to 3D potential plot
             path_plot_pot= os.path.join(basedir,path_plot_pot)
-            path_plot_trajectory = 'static\\img\\traj'+date_time+'.png' # path to trajectory plot
+            path_plot_trajectory = 'static\\img\\traj'+date_time+'.png' #path to trajectory plot
             path_plot_trajectory = os.path.join(basedir, path_plot_trajectory )
-            file1 = open(path_plot_pot, 'w') #creating the files where we stores the plots
+            path_plot_losses = 'static\\img\\loss'+date_time+'.png' #path to loss plot
+            path_plot_losses = os.path.join(basedir, path_plot_losses )
+            path_plot_rc = 'static\\img\\rc'+date_time+'.png' #path to trajectory plot
+            path_plot_rc = os.path.join(basedir, path_plot_rc)
+
+            #creating the files where we store the plots
+            file1 = open(path_plot_pot, 'w') 
             file1.close()
             file2 = open(path_plot_trajectory, 'w')
             file2.close()
+            file3 = open(path_plot_losses, 'w')
+            file3.close()
+            file4 = open(path_plot_rc, 'w')
+            file4.close()
+
+            #saving the plots
             fig_pot.write_html(path_plot_pot)
-            fig_traj=pt.plot_trajectory(potential) 
             fig_traj.savefig(path_plot_trajectory)
-            return render_template('visualisation.html', title='Visualisation', molecule=molecule , url=url, pot_path='/static/plot/plot3D'+date_time+'.html', traj_path='/static/img/traj'+date_time+'.png', formulaire_rempli = True)
+            fig_loss.savefig(path_plot_losses)
+            fig_rc.savefig(path_plot_rc)     
+
+            return render_template('visualisation.html', title='Visualisation', molecule=molecule , url=url, pot_path='/static/plot/plot3D'+date_time+'.html', traj_path='/static/img/traj'+date_time+'.png', loss_path = '/static/img/loss'+date_time+'.png', rc_path = '/static/img/rc'+date_time+'.png', formulaire_rempli = True)
  
     return render_template('visualisation.html', title='Visualisation', formulaire_rempli=False)
 

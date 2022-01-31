@@ -15,7 +15,6 @@ def distance(x0,y0,x,y):
 
 def potV(x0,y0,r,x,y,a):
     dis = distance(x0,y0,x,y)
-    print(dis)
     if dis<=r:
         val = -a*(1-abs(x-x0)/r)*(1-abs(x-x0)/r)-a*(1-abs(y-y0)/r)*(1-abs(y-y0)/r)
         return val
@@ -36,7 +35,6 @@ class MultimodalPotential:
         """
         self.beta = beta
         self._bowls_coord=np.copy(bowls_coord)
-        print(self._bowls_coord)
         self.dim = 2
         self.nbr_bowls = np.shape(bowls_coord)
         self.Z = None
@@ -60,11 +58,9 @@ class MultimodalPotential:
             r=bowl[2]
             a=bowl[3]
             dis = np.sqrt((x0-x)*(x0-x)+(y-y0)*(y-y0))
-            #print(dis)
             if dis<r:
                 V-=a*(1-(x-x0)*(x-x0)/(r*r))*(1-(y-y0)*(y-y0)/(r*r))
-            #V+=potV(x0,y0,r,x,y,a)
-        V+=0.2 * (x ** 2) + 0.2 * ((y - 1/3) ** 2)
+        V+=0.2 * (x ** 4) + 0.2 * ((y - 1/3) ** 4)
         return V
     
     def dV_x(self, x, y):
@@ -83,7 +79,7 @@ class MultimodalPotential:
             dis = np.sqrt((x0-x)*(x0-x)+(y-y0)*(y-y0))
             if dis<r:
                 dVx+=2*a*((x-x0)/(r*r))*(1-(y-y0)*(y-y0)/(r*r))
-        dVx+= 0.8 * (x)
+        dVx+= 0.8 * (x**3)
         return dVx
     
     def dV_y(self, x, y):
@@ -103,7 +99,7 @@ class MultimodalPotential:
             if dis<r:
                 dVy+=2*a*((y-y0)/(r*r))*(1-(x-x0)*(x-x0)/(r*r))
 
-        dVy+= 0.8 * ((y - 1/3))
+        dVy+= 0.8 * ((y - 1/3)**3)
         return dVy
     
     def nabla_V(self, X):
@@ -133,104 +129,14 @@ class MultimodalPotential:
         """
         self.Z, _ = integrate.dblquad(self.boltz_weight, -5, 5, -5, 5)  
 
-#bowls = np.array([[0.5,0.5,0.15,0.2],[0.7,0.87,0.1,1.5],[0.2,0.8,0.1,0.5]])
-#Potential = MultimodalPotential(bowls)
-#X=np.zeros((N,N))
-#Y=np.zeros((N,N))
-#Potential_map=np.zeros((N,N))
-#for i in range(N):
- #   for j in range(N):
-  #      X[i,j]=i/N
-   #     Y[i,j]=j/N
-    #    Potential_map[i,j]=Potential.V(np.array([i/N,j/N]))
-
-
-#fig = plt.figure()
-#ax = fig.add_subplot(111, projection='3d')
-# Plot the surface
-#ax.plot_surface(X, Y, Potential_map, color='b')
-
-#plt.show()
-def theta(X):
-    x=X[0]
-    y=X[1]
-    if x>0 and y>=0:
-        return np.arctan(y/x)
-    if x>0 and y<0:
-        return np.arctan(y/x)+2*np.pi
-    if x<0:
-        return np.arctan(y/x) + np.pi
-    if x==0 and y>0:
-        return np.pi/2
-    else :
-        return 3*np.pi/2
-class Subvaraitiespotential:
-    def __init__(self,A,m,rs,hs,i):
-        """Initialise potential function class
-
-        :param A=Amplitude
-    
-        """
-        self.Ampl=A
-        self.deg=m
-        self.R=rs
-        self.length=hs
-        self.angle=i
-
-
-    def V(self, X):
-        """Potential function
-
-        :param X: np.array, Position  vector (x,y), ndim = 1, shape = (2,)
-        :return: V: float, potential energy value
-        """
-        assert(type(X) == np.ndarray)
-        assert(X.ndim == 1)
-        assert(X.shape[0] == 2)
-        x = X[0]
-        y = X[1]
-        r=np.sqrt(x**2 + y**2)
-        t = theta(X)
-        V=self.Ampl*r*np.exp(-r/self.length)*np.cos((np.log(r/self.R)/np.tan(self.angle)-t))
-        return V
-
-
-def create_figure(potential):
-    if potential =="multimodal":
-        bowls = np.array([[0.5,0.5,0.15,0.2],[0.7,0.87,0.1,1.5],[0.2,0.8,0.1,0.5]])
-        Potential = MultimodalPotential(bowls)
-        X=np.zeros((N,N))
-        Y=np.zeros((N,N))
-        Potential_map=np.zeros((N,N))
-        for i in range(N):
-            for j in range(N):
-                X[i,j]=i/N
-                Y[i,j]=j/N
-                Potential_map[i,j]=Potential.V(np.array([i/N,j/N]))
-    else :
-        Potential = Subvaraitiespotential(1,5,1e-3,2,math.pi/10)
-    
-        grid = np.linspace(-2,2,100)
-
-        X=np.outer(grid, np.ones(100))
-        Y=np.outer(grid + 0.5, np.ones(100)).T
-        Potential_map=np.zeros([100, 100])
-        for i in range(100):
-            for j in range(100):
-                    Potential_map[i,j]=Potential.V(np.array([grid[i],grid[j]+0.5]))
-
-    
-    fig= plt.figure(figsize=(9,3))
-    ax0 = fig.add_subplot(1,2,1, projection='3d')
-    ax1 = fig.add_subplot(1,2,2)
-    # Plot the surface
-    ax0.plot_surface(X, Y, Potential_map, color='b')
-    ax1.pcolormesh(X, Y, Potential_map, cmap='coolwarm_r',shading='auto')
-    return fig
-
 
 def create_plots(Potential):
+    """
+        creates 3D potential plot
+        :param Potential: MultimodalPotential, the potential
 
+        :return: potential figure
+        """
     grid = np.linspace(-2,2,100)
     X = np.outer(grid, np.ones(100))
     Y = np.outer(grid + 0.5, np.ones(100)).T
@@ -250,7 +156,7 @@ def create_plots(Potential):
     return fig3D
 
 
-def UnbiasedTraj(pot, X_0, delta_t=1e-3, T=1000, save=1, save_energy=False, seed=0):
+def UnbiasedTraj(pot, X_0 = np.array([0, 0]), delta_t=1e-3, T=1000, save=1, save_energy=False, seed=0):
     """Simulates an overdamped langevin trajectory with a Euler-Maruyama numerical scheme 
 
     :param pot: potential object, must have methods for energy gradient and energy evaluation
@@ -280,7 +186,15 @@ def UnbiasedTraj(pot, X_0, delta_t=1e-3, T=1000, save=1, save_energy=False, seed
                 Pot_values.append(pot.V(X))
     return np.array(traj), np.array(Pot_values)
 
-def plot_trajectory(Potential):
+def plot_trajectory(Potential, trajectory):
+    """
+        creates trajectory plot
+        :param Potential: MultimodalPotential, the potential
+        :param trajectory: np.array with ndim = 2 and shape = (T // save + 1, 2)
+
+        :return: trajectory figure
+        """
+    #plot the potential
     grid = np.linspace(-2,2,100)
     x_plot = np.outer(grid, np.ones(100))
     y_plot = np.outer(grid + 0.5, np.ones(100)).T
@@ -289,16 +203,18 @@ def plot_trajectory(Potential):
         for j in range(100):
             potential_on_grid[i, j] = Potential.V(np.array([grid[i], grid[j] + 0.5]))
 
-    
-    delta_t = 0.01
-    T = 1000
-    #pot = TripleWellPotential(beta)
-    x_0 = np.array([0, 0])
-    trajectory, _ = UnbiasedTraj(Potential, x_0, delta_t=delta_t, T=T, save=1, save_energy=False, seed=None)
+    #plot the trajectory
     fig = plt.figure(figsize=(9,3))
     ax0 = fig.add_subplot(1, 2, 1)
     ax1 = fig.add_subplot(1, 2, 2)
     ax0.pcolormesh(x_plot,y_plot,  potential_on_grid, cmap='coolwarm_r', shading='auto')
     ax0.scatter(trajectory[:,0], trajectory[:,1], marker='x')
+    ax0.set_xlabel("x coodinate")
+    ax0.set_ylabel("y coodinate")
+    ax0.set_title("trajectory of the molecule")
     ax1.plot(range(len(trajectory[:,0])), trajectory[:,0], label='x coodinate along trajectory')
+    ax1.set_xlabel("time")
+    ax1.set_ylabel("x coordinate")
+    ax1.set_title('x coordinate along trajectory at time t')
     return fig
+
