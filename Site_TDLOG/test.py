@@ -272,9 +272,9 @@ def explication4():
         except ValueError:
             return render_template('explication4.html', title='Explanation', url=url, error=True, completed_form=False)
         
-        fig.write_html('static/templates/rama_user.html',full_html=False,include_plotlyjs='cdn')
+        fig.write_html('static/plot/rama_user.html',full_html=False,include_plotlyjs='cdn')
         anim_fig = rama.rama_frame(phi_atom, psi_atom)
-        anim_fig.write_html('static/templates/rama_frame.html', full_html=False,include_plotlyjs='cdn')
+        anim_fig.write_html('static/plot/rama_frame.html', full_html=False,include_plotlyjs='cdn')
         return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=True)  
 
     return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=False)

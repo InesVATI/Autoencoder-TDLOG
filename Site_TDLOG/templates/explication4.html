@@ -2,6 +2,10 @@
 
 {% block styles %} 
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style_explication.css')}}">
+<script type="text/javascript" src= "/static/js/jmol/jsmol/jsmol/JSmol.min.js"></script>
+<script type="text/javascript" src= "/static/js/jmol/jsmol/jsmol/js/Jmol2.js"></script>
+<script> jmolInitialize("/static/js/jmol/jsmol/jsmol");</script>
+<script type="text/javascript" src="/static/js/jmol/jsmol/jsmol/JSmol.lite.nojq.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -41,22 +45,22 @@
 
             Your Ramachandran plot is displayed below. Drag your cursor on the graph!
              
-            <iframe src= "/static/templates/rama_user.html" width="600" height="600" ></iframe>
+            <iframe src= "/static/plot/rama_user.html" width="600" height="600" ></iframe>
             <p>If all the points are on a same line or column, that means you've entered at least two same atom to define one of your angle. That is not correct!</p>
             <p>You can also see the evolution according to time of the conformation (represented by dihedral angles)
             Play with the slider. To fix the axes press the stop button and then the start one. Hope you will enjoy !</p>
-            <iframe src="/static/templates/rama_frame.html" width="600" height="600" ></iframe>
+            <iframe src="/static/plot/rama_frame.html" width="600" height="600" ></iframe>
 
         {% else %}
             <div class="row wp-block-image">
-                You have to choose 4 atoms in order to define a dihedral angle. You can see the numerotation of atoms 
+               <p> You have to choose 4 atoms in order to define a dihedral angle. You can see the numerotation of atoms 
                 by dragging the cursor over the atoms: the number and the atom name will appear ! <br>
-                Find the right angles and chart the correct Ramachandran plot !
+                Find the right angles and chart the correct Ramachandran plot !</p>
             </div>
             <div class="row">
-                <h2>Map out the Ramachandran plot</h2>
-                <p>Enter a number between 1 and 23 in each box.</p>
-                <p>If you don't know what to choose you can start with [5, 7, 9, 15] for &phi; and  [7, 9, 15, 17] for &psi;.</p>
+                <h2>Map out the Ramachandran plot</h2><br>
+                <p>Enter a number between 1 and 23 in each box.<br>
+                If you don't know what to choose you can start with [5, 7, 9, 15] for &phi; and  [7, 9, 15, 17] for &psi;.</p>
             </div>
             <div class="form-container">
                 <form action="#" method="POST">
