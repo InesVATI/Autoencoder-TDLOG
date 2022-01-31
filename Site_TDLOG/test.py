@@ -1,12 +1,8 @@
-from flask import Flask, url_for, redirect, render_template, request
+from flask import Flask, url_for, redirect, render_template, request, flash
 import numpy as np
 import potentials as pt
 from datetime import datetime
-from flask import Flask, url_for, redirect, render_template, request,  flash
 import dihedral_angles as rama
-import sqlite3
-import click
-from flask import Flask, url_for, abort, redirect, render_template, request, current_app, g, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
