@@ -2,39 +2,59 @@
 
 {% block styles %} 
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style_visualisation.css')}}">
+<script type="text/javascript" src= "/static/js/jmol/jsmol/jsmol/JSmol.min.js"></script>
+<script type="text/javascript" src= "/static/js/jmol/jsmol/jsmol/js/Jmol2.js"></script>
+<script> jmolInitialize("/static/js/jmol/jsmol/jsmol");</script>
+<script type="text/javascript" src="/static/js/jmol/jsmol/jsmol/JSmol.lite.nojq.js"></script>
 {% endblock %}
 
 {% block content %}
+
 <div class="visualisation">
     {% if formulaire_rempli %}
     <div class="container">
-      You chose to visualize the results on the {{choix["molecule"]}} molecule.
+      You chose to visualize the results on the {{molecule}} molecule.
       <div class="row">
-        <div class="col-md-3">
-        The {{choix["molecule"]}} molecule
+        <div class="col">
+        The {{molecule}} molecule
           <script>
             jmolApplet(400, "load {{url}}" , "0" )
           </script>
         </div>
-        <div class="col-md-3"></div>
-        <div class="col-md-3">
-          <iframe src="/static/plot/plot3D.html" width="800" height="800" frameborder="1"></iframe>
+        <div class="col">
+          <iframe src={{pot_path}} width="550" height="550" frameborder="0"></iframe>
         </div>
       </div>
-      <div class="row">
-        Here is the trajectory simulated which represents the data on which we will train our autoencoder
-        <img src='/static/img/test.png' alt="The trajectory simulated which represents the data on which we will train our autoencoder" height=200px />
+      <div class="row"></div>
+      <div class="row justify-content-center">
+        Here is the trajectory simulated which represents the data on which we will train our autoencoder. On the left, we can observe the trajectory of the molecule. On the right, wa can observe the progression of the x coordinates through the time.
+        <img src={{traj_path}} alt="The trajectory simulated which represents the data on which we will train our autoencoder" height=350px />
       </div>
     </div>
-      <!--<div w3-include-html={{path}}></div>-->
-      <!--<script src="/static/js/index.js"></script>-->
-    
+
     {% else %}
     {{choix_modelisation}}
     <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="paragraph-container">
+        This is the page where you apply our project results! <br>
+        First off, start be choosing the molecule you want to work with. <br>
+        <br>
+        Let us show you an example of how our simulation works: <br>
+        <br>
+        We must respect the following conditions though, the coordinates are only located in the [-2,2]x[-2,2]. <br>
+        For 2 high intensity potential areas located at (-1;-1.2) and (0.7;0.8) 
+        with radius 0.3 and 0.5 and amplitudes 10 and 15 respectively.
+        We get the following potential :
+      </div>
+      </div>
+      <div class ='col'>
+        <iframe src="/static/plot/plot3D.html" width="500" height="500" frameborder="0"></iframe>
+      </div>
+    </div>
+     
     <h2>Form</h2>
-    This is the page where you apply our project results! <br>
-    First off, start be choosing the molecule you want to work with. <br>
     <div class="form-container">
       <form action="#" method="post">
         <div class="row">
@@ -54,67 +74,84 @@
             <option value=5>5</option>
           </select>
         </div>
+
         <div class="row">
           <label for="bowl1">Please enter the coordinates for the first high potential</label>
-          <div class="col">
-            <input type="text" class="form-control" name="bowl1xy" placeholder="x0;y0">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl1r" placeholder="r">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl1a" placeholder="a">
+          <div class="row justify-content-center">
+            <div class="col">
+              <input type="text" class="form-control" name="bowl1xy" placeholder="x0;y0">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl1r" placeholder="r">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl1a" placeholder="a">
+            </div>
           </div>
         </div>
         <div class="row">
           <label for="bowl2">Please enter the coordinates for the second high potential</label>
-          <div class="col">
-            <input type="text" class="form-control" name="bowl2xy" placeholder="x0;y0">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl2r" placeholder="r">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl2a" placeholder="a">
+          <div class="row justify-content-center">
+            <div class="col">
+              <input type="text" class="form-control" name="bowl2xy" placeholder="x0;y0">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl2r" placeholder="r">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl2a" placeholder="a">
+            </div>
           </div>
         </div>
         <div class="row">
           <label for="bowl3">Please enter the coordinates for the third high potential</label>
-          <div class="col">
-            <input type="text" class="form-control" name="bowl3xy" placeholder="x0;y0">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl3r" placeholder="r">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl3a" placeholder="a">
+          <div class="row justify-content-center">
+            <div class="col">
+              <input type="text" class="form-control" name="bowl3xy" placeholder="x0;y0">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl3r" placeholder="r">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl3a" placeholder="a">
+            </div>
           </div>
         </div>
         <div class="row">
           <label for="bowl4">Please enter the coordinates for the fourth high potential</label>
-          <div class="col">
-            <input type="text" class="form-control" name="bowl" placeholder="x0;y0">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl1r" placeholder="r">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl1a" placeholder="a">
+          <div class="row justify-content-center">
+            <div class="col">
+              <input type="text" class="form-control" name="bowl4xy" placeholder="x0;y0">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl4r" placeholder="r">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl4a" placeholder="a">
+            </div>
           </div>
         </div>
         <div class="row">
           <label for="bowl5">Please enter the coordinates for the fifth high potential</label>
-          <div class="col">
-            <input type="text" class="form-control" name="bowl" placeholder="x0;y0">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl1r" placeholder="r">
-          </div>
-          <div class="col">
-            <input type="float" class="form-control" name="bowl1a" placeholder="a">
+          <div class="row justify-content-center">
+            <div class="col">
+              <input type="text" class="form-control" name="bowl5xy" placeholder="x0;y0">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl5r" placeholder="r">
+            </div>
+            <div class="col">
+              <input type="float" class="form-control" name="bowl5a" placeholder="a">
+            </div>
           </div>
         </div>
-        <input type="submit" value="Lancer la modélisation">
+        <div class="row">
+          <hr>
+        </div>
+        <div class="row">
+          <input type="submit" class="btn btn-dark btn-block" value="Lancer la modélisation">
+        </div>
+ 
       </form>
     </div>
   </div>

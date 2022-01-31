@@ -1,20 +1,16 @@
 from flask import Flask, url_for, redirect, render_template, request
 import numpy as np
 import potentials as pt
-import sqlite3
-import click
-from flask import Flask, url_for, abort, redirect, render_template, request, current_app, g, flash
+from datetime import datetime
+from flask import Flask, url_for, redirect, render_template, request,  flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
-from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
-import email_validator
-from flask_user import UserManager
+from flask_login import UserMixin, login_user, LoginManager, logout_user, current_user
 from flask_bcrypt import Bcrypt
-from flask.cli import with_appcontext
-import plotly
 import os
+import requests
 
 N=1000
 
@@ -131,44 +127,91 @@ def index():
 @app.route('/visualisation',  methods=['GET','POST'])
 def visualisation():
     if request.method == "POST":
+        errors = False
         molecule = request.form['molecule']
-        beta = int(request.form['beta'])
+        try:
+            beta = int(request.form['beta'])
+        except ValueError:
+            flash("Please insert a new beta, it must be a float (floats should be with a point (exp : 0.5 not 0,5)")
+            errors = True
         num = int(request.form['number'])
-        print(num)
         bowls=[]
         
         for i in range(1,num+1):
             coord="bowl"+str(i)+"xy"
             xy=request.form[coord]
-            x0,y0=xy.split(";")
-            x0=float(x0)
-            y0=float(y0)
-
+            try:
+                x0,y0=xy.split(";")
+                try:
+                    x0=float(x0)
+                except ValueError:
+                    flash(f"Please insert a new x coordinate in the high intensity area number {i}, it must be a float (floats should be with a point (exp : 0.5 not 0,5)")
+                    errors = True            
+                try:
+                    y0=float(y0)
+                except ValueError:
+                    flash(f"Please insert a new y coordinate in the high intensity area number {i} , it must be a float (floats should be with a point (exp : 0.5 not 0,5)")
+                    errors = True
+            except ValueError:
+                flash(f"Please respect the coordinates format in the high intensity area number {i}, it must be at the form x;y ")
+                errors = True            
+            
             r_id="bowl"+str(i)+"r"
-            r=float(request.form[r_id])
-            a_id="bowl"+str(i)+"a"
-            a=float(request.form[a_id])
-            bowls.append([x0,y0,r,a])
-        
-        bowl=np.array(bowls)
-        url = fetch_url(molecule)
-        potential=pt.MultimodalPotential(bowl, beta)
-        fig=pt.create_plots(potential)
-        print(os.path.join(basedir, 'static/plot/plot3D.html'))
-        fig.write_html(os.path.join(basedir, 'static/plot/plot3D.html'))
-        fig=pt.plot_trajectory(potential) 
-        fig.savefig(os.path.join(basedir, 'static/img/test.png'))
-        choix_mod={"molecule": molecule , "molecule3D" : url  }
-        return render_template('visualisation.html', title='Visualisation', choix=choix_mod , url= fetch_url(molecule), formulaire_rempli = True)
+            try:
+                r=float(request.form[r_id])
+            except ValueError:
+                flash(f"Please insert a new radius in the high intensity area number {i}, it must be a float (floats should be with a point (exp : 0.5 not 0,5)")
+                errors = True
 
-        
+            a_id="bowl"+str(i)+"a"
+            try:
+                a=float(request.form[a_id])
+            except ValueError:
+                flash(f"Please insert a new amplitude in the high intensity area number {i}, it must be a float (floats should be with a point (exp : 0.5 not 0,5)")
+                errors = True
+            
+            if not errors :
+                if abs(x0) > 2:
+                    flash(f"Please choose a value for x in the interval [-2,2] in the high intensity area number {i}")
+                    errors = True
+                if abs(y0) > 2:
+                    flash(f"Please choose a value for x in the interval [-2,2] in the high intensity area number {i}")
+                    errors = True
+                bowls.append([x0,y0,r,a])
+
+        url = fetch_url(molecule)
+        response = requests.get(url)
+        if response.status_code != 200:
+            flash(f"The molecule {molecule} you looked for seems as if it doesn't exist in the database. Make sure it is spelled correctly !")
+            errors = True
+
+        if errors : 
+            return render_template('visualisation.html', title='Visualisation', formulaire_rempli=False)
+        else:
+            bowl=np.array(bowls)
+            potential=pt.MultimodalPotential(bowl, beta)
+            fig_pot=pt.create_plots(potential)
+            now = datetime.now() # current date and time to identify plots
+            date_time = now.strftime("%m%d%Y%H%M%S%f")
+            path_plot_pot ='static\\plot\\plot3D'+date_time+'.html' #path to 3D potential plot
+            path_plot_pot= os.path.join(basedir,path_plot_pot)
+            path_plot_trajectory = 'static\\img\\traj'+date_time+'.png' # path to trajectory plot
+            path_plot_trajectory = os.path.join(basedir, path_plot_trajectory )
+            file1 = open(path_plot_pot, 'w') #creating the files where we stores the plots
+            file1.close()
+            file2 = open(path_plot_trajectory, 'w')
+            file2.close()
+            fig_pot.write_html(path_plot_pot)
+            fig_traj=pt.plot_trajectory(potential) 
+            fig_traj.savefig(path_plot_trajectory)
+            return render_template('visualisation.html', title='Visualisation', molecule=molecule , url=url, pot_path='/static/plot/plot3D'+date_time+'.html', traj_path='/static/img/traj'+date_time+'.png', formulaire_rempli = True)
+ 
     return render_template('visualisation.html', title='Visualisation', formulaire_rempli=False)
 
 @app.route('/explication', methods=['GET','POST'])
 def explication():
     current_user.change_tuto(0)
     return render_template('explication.html', title='Explanation')
-
 
 @app.route('/profil/<string:username>/<string:status>')
 def profil_visualization_history(username,status):
@@ -220,8 +263,6 @@ def explication4():
 @app.route('/explication/codeNN')
 def codeAE():
     return render_template('TrainingAE.html')
-
-
 
 
 if __name__ == "__main__":

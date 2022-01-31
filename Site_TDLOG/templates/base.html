@@ -3,19 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Deep Learning applied to molecular dynamics</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style_base.css') }}">
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>  
     {% block styles %} {% endblock %}
-    <script src="http://x3dom.org/release/x3dom.js"></script>
-    <link rel="stylesheet" href="http://x3dom.org/release/x3dom.css" />
-    <script src="https://www.w3schools.com/lib/w3data.js" ></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-    <script src="http://x3dom.org/release/x3dom.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src= "/static/js/jmol/jsmol/jsmol/JSmol.min.js"></script>
-    <script src= "/static/js/jmol/jsmol/jsmol/js/Jmol2.js"></script>
-    <script> jmolInitialize("/static/js/jmol/jsmol/jsmol");</script>
-    <script src="/static/js/jmol/jsmol/jsmol/JSmol.lite.nojq.js"></script>
+    
 
 <header>
     <div class="page_title_connection">
@@ -60,6 +52,21 @@
     </nav>
 </header>
 <body>
+    <div id="flash-message-wrapper">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <h4 class="alert-heading">There is a mistake! Please try again. </h4>
+              <span>{{ message }}</span>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {%endfor%}
+          {% endif %}
+        {% endwith %} 
+        </div>
     <div class= container-fluid>
         <div class=container>
             <h1 class="page-title">{{title}}</h1>
@@ -68,5 +75,8 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
