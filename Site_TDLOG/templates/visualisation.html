@@ -29,7 +29,9 @@
       <div class="row justify-content-center">
         Here is the trajectory simulated which represents the data on which we will train our autoencoder. On the left, we can observe the trajectory of the molecule. On the right, wa can observe the progression of the x coordinates through the time.
         <img src={{traj_path}} alt="The trajectory simulated which represents the data on which we will train our autoencoder" height=350px />
+        Compare the different neural networks. You should notice that the DeepAutoencoder's loss is better (that is to say lower) at the end of the training than the SimpleAutoEncoder's.
       </div>
+       
       <div> 
         We consider two models: <br>
           - SimpleAutoEncoder which corresponds to the simplest possible autoencoder going directly from the input to the bottleneck and then to the output<br>

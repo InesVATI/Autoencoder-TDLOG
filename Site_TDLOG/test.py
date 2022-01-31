@@ -1,10 +1,13 @@
 import os
 
+#-----Modules for creating our app and our database
+
 from flask import Flask, url_for, redirect, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from flask_login import UserMixin, login_user, LoginManager, logout_user, current_user
 from flask_bcrypt import Bcrypt
+
 
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
@@ -12,9 +15,10 @@ import requests
 import numpy as np
 import datetime as datetime
 
+#----Modules that we wrote 
+import potentials as pt
 import autoencoders as ae
 import dihedral_angles as rama
-import potentials as pt
 
 N=1000
 
@@ -23,19 +27,20 @@ app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 print(basedir)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.sqlite')
-
+app.config['SECRET_KEY'] = 'thisisasecretkey'
+app.config['SQLACLHEMY_TRACK_MODIFICATIONS']=True
 
 db= SQLAlchemy(app)
 bcrypt=Bcrypt(app)
 
-app.config['SECRET_KEY'] = 'thisisasecretkey'
-#app.config['ALCHEMY_DATABASE_URI']='sqlite:///database.db'
-#app.config['ALCHEMY_DATABASE_URI']= os.getenv('DATABASE_URL', 'sqlite:///app.db')
-app.config['SQLACLHEMY_TRACK_MODIFICATIONS']=True
-
 def fetch_url(name):
-     url="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/"+name+"/SDF?record_type=3d"
-     return url
+    """ When the user choose a molecule to be displayed,
+        create the url that leads to the sdf file in the pubchem dataset
+
+        :param name: string, molecule's name the user had entered
+        """
+    url="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/"+name+"/SDF?record_type=3d"
+    return url
 
 class User(db.Model,UserMixin):
     id=db.Column(db.Integer, primary_key=True)
@@ -123,7 +128,6 @@ def logout():
     return redirect(url_for('index'))
 
 @app.route('/', methods=['GET','POST'])
-#@app.route('/index')
 def index():
     return render_template('index.html', title='Homepage')
 
