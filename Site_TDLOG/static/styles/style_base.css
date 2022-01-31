@@ -13,11 +13,6 @@ header h1 {
     margin-left: 5px;
 }
 
-button {
-    color: rgb(0, 0, 0);
-    margin: 20px;
-}
-
 .page_title_connection {
     display: flex;
     flex-direction: row;
