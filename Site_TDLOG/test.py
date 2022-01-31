@@ -3,6 +3,10 @@ import numpy as np
 import potentials as pt
 from datetime import datetime
 from flask import Flask, url_for, redirect, render_template, request,  flash
+import dihedral_angles as rama
+import sqlite3
+import click
+from flask import Flask, url_for, abort, redirect, render_template, request, current_app, g, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
@@ -208,10 +212,11 @@ def visualisation():
  
     return render_template('visualisation.html', title='Visualisation', formulaire_rempli=False)
 
-@app.route('/explication', methods=['GET','POST'])
+@app.route('/explication/0', methods=['GET','POST'])
 def explication():
-    current_user.change_tuto(0)
-    return render_template('explication.html', title='Explanation')
+    """ Vizualisation of our work during MOPSI project """
+    current_user.tuto0=True
+    return render_template('explication0.html', title='Explanation')
 
 @app.route('/profil/<string:username>/<string:status>')
 def profil_visualization_history(username,status):
@@ -225,9 +230,10 @@ def profil_change_parameters(username,status):
 def profil_tutorial(username,status):
     return render_template('profil_tutorial.html', username=username, status=status, title="Tutorial")
 
-
 @app.route('/explication/1')
 def explication1():
+    """ Vizualisation of our work during MOPSI project """
+
     current_user.tuto1=True
     if current_user.tuto1:
         print("L'uilisateur a fait le tuto1")
@@ -235,6 +241,8 @@ def explication1():
 
 @app.route('/explication/2')
 def explication2():
+    """ Vizualisation of our work during MOPSI project """
+
     current_user.tuto2=True
     if current_user.tuto2:
         print("L'uilisateur a fait le tuto2")
@@ -242,6 +250,8 @@ def explication2():
 
 @app.route('/explication/3')
 def explication3():
+    """ Vizualisation of our work during MOPSI project """
+
     current_user.tuto3=True
     if current_user.tuto3:
         print("L'uilisateur a fait le tuto3")
@@ -249,19 +259,35 @@ def explication3():
 
 @app.route('/explication/4', methods=['GET', 'POST'])
 def explication4():
+    """ Display the last step of the tutorial 
+        The user can choose the atoms and plot the correcponding Rama plot 
+        Display an error message if the user didn't fill the cases correctly """
+
     current_user.tuto4=True
     if current_user.tuto4:
         print("L'uilisateur a fait le tuto4")
+    url=fetch_url("dialanine")
+
     if request.method == 'POST':
-        phi_atom1 = request.form['phi_atom1']
-        phi_atom2 = request.form['phi_atom2']
-        phi_atom3 = request.form['phi_atom3']
-        phi_atom4 = request.form['phi_atom4']
-       # phi_angle = np.array([int(phi_atom1), int(phi_atom2), int(phi_atom3), int(phi_atom4)])
-    return render_template('explication4.html', title='Explanation')
+        try :
+            phi_atom = [int(request.form['phi_atom1'])-1, int(request.form['phi_atom2'])-1, int(request.form['phi_atom3'])-1, int(request.form['phi_atom4'])-1]
+            psi_atom = [int(request.form['psi_atom1'])-1, int(request.form['psi_atom2'])-1, int(request.form['psi_atom3'])-1, int(request.form['psi_atom4'])-1]
+            fig = rama.rama_plot(phi_atom, psi_atom)
+        except ValueError:
+            return render_template('explication4.html', title='Explanation', url=url, error=True, completed_form=False)
+        
+        fig.write_html('static/templates/rama_user.html',full_html=False,include_plotlyjs='cdn')
+        anim_fig = rama.rama_frame(phi_atom, psi_atom)
+        anim_fig.write_html('static/templates/rama_frame.html', full_html=False,include_plotlyjs='cdn')
+        return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=True)  
+
+    return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=False)
 
 @app.route('/explication/codeNN')
 def codeAE():
+    """ Show one of the notebooks we use in our MOPSI project
+        This show thetraining for a 3D trajectory  """
+
     return render_template('TrainingAE.html')
 
 
