@@ -164,13 +164,12 @@ def theta(X):
         return 3*np.pi/2 
         
 class Subvaraitiespotential:
-    def __init__(self,A,m,rs,hs,i,beta):
+    def __init__(self,A, rs,hs,i,beta):
         """Initialise potential function class
 
         :param A=Amplitude
         """
         self.Ampl=A
-        self.deg=m
         self.R=rs
         self.length=hs
         self.angle=i
@@ -280,7 +279,7 @@ def create_figure(potential):
                 Y[i,j]=j/N
                 Potential_map[i,j]=Potential.V(np.array([i/N,j/N]))
     else :
-        Potential = Subvaraitiespotential(1,5,1e-3,2,math.pi/10)
+        Potential = Subvaraitiespotential(1, 1e-3,2,math.pi/10, 4)
     
         grid = np.linspace(-2,2,100)
 
@@ -381,7 +380,12 @@ def plot_trajectory(Potential):
 
 
 
-Potential = Subvaraitiespotential(1,5,1e-3,2,math.pi/10,4)
+A=1
+rs= 1e-3
+hs=1
+i= math.pi/15
+beta=4
+Potential = Subvaraitiespotential(A, rs,hs, i, beta)
 
 grid = np.linspace(-2,2,100)
 
