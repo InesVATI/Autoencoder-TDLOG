@@ -381,11 +381,11 @@ def plot_trajectory(Potential):
 
 
 A=1
-rs= 1e-3
-hs=1
+rs= 1e-2
+hs=2
 i= math.pi/15
 beta=4
-Potential = Subvaraitiespotential(A, rs,hs, i, beta)
+Potential = Subvaraitiespotential(A, rs, hs, i, beta)
 
 grid = np.linspace(-2,2,100)
 
