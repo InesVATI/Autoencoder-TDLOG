@@ -4,11 +4,9 @@ import matplotlib.pyplot as plt
 import math
 import plotly.express as px
 from scipy import integrate
-import matplotlib
-matplotlib.use('Agg') # this allows PNG plotting
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
-import plotly
+
 
 def distance(x0,y0,x,y):
     return np.sqrt((x0-x)*(x0-x)+(y-y0)*(y-y0))
@@ -166,11 +164,10 @@ def theta(X):
         return 3*np.pi/2 
         
 class Subvaraitiespotential:
-    def __init__(self,A,m,rs,hs,beta):
+    def __init__(self,A,m,rs,hs,i,beta):
         """Initialise potential function class
 
         :param A=Amplitude
-    
         """
         self.Ampl=A
         self.deg=m
@@ -225,29 +222,21 @@ class Subvaraitiespotential:
         y = X[1]
         r=np.sqrt(x**2 + y**2)
         t = theta(X)
-        dV=self.Ampl*r*np.exp(-r/self.length)*np.log(r/self.R)*(np.tan(self.angle)+1+1/np.tan(self.angle))*np.sin((np.log(r/self.R)/np.tan(self.angle)-t))
+        dV=self.Ampl*r*np.exp(-r/self.length)*np.sin((np.log(r/self.R)/np.tan(self.angle)-t))
         return dV
 
-    def dV_x(self, X):
-        assert(type(X) == np.ndarray)
-        assert(X.ndim == 1)
-        assert(X.shape[0] == 2)
-        x = X[0]
-        y = X[1]
+    def dV_x(self, x,y):
+        X = np.array([x, y])
         r=np.sqrt(x**2 + y**2)
         t = theta(X)
-        dVdx= (self.dV_r - self.dV_theta/r)*np.cos(t)
+        dVdx= (self.dV_r(X)- self.dV_theta(X)/r)*np.cos(t)
         return dVdx
 
-    def dV_y(self, X):
-        assert(type(X) == np.ndarray)
-        assert(X.ndim == 1)
-        assert(X.shape[0] == 2)
-        x = X[0]
-        y = X[1]
+    def dV_y(self, x,y):
+        X = np.array([x, y])
         r=np.sqrt(x**2 + y**2)
         t = theta(X)
-        dVdy= (self.dV_r + self.dV_theta/r)*np.sin(t)
+        dVdy= (self.dV_r(X) + self.dV_theta(X)/r)*np.sin(t)
         return dVdy
 
     def nabla_V(self, X):
@@ -357,6 +346,10 @@ def UnbiasedTraj(pot, X_0, delta_t=1e-3, T=1000, save=1, save_energy=False, seed
     for i in range(T):
         b = r.normal(size=(dim,))
         X = X - pot.nabla_V(X) * delta_t + np.sqrt(2 * delta_t/pot.beta) * b
+        if X[0]>2 or X[0]<-2:
+            X[0]=2*np.sign(X[0])
+        if X[1]>2 or X[1]<-2:
+            X[1]=2*np.sign(X[1])
         if i % save==0:
             traj.append(X)
             if save_energy:
@@ -376,7 +369,7 @@ def plot_trajectory(Potential):
     delta_t = 0.01
     T = 1000
     #pot = TripleWellPotential(beta)
-    x_0 = np.array([0, 0])
+    x_0 = np.array([-0.177, -0.5753])
     trajectory, _ = UnbiasedTraj(Potential, x_0, delta_t=delta_t, T=T, save=1, save_energy=False, seed=None)
     fig = plt.figure(figsize=(9,3))
     ax0 = fig.add_subplot(1, 2, 1)
@@ -387,10 +380,24 @@ def plot_trajectory(Potential):
     return fig
 
 
-if __name__== '__main__':
-    A=4
-    m=1
-    rs=3
-    hs=3
-    i=2
-    pot = Subvaraitiespotential(A, m, rs, hs, i)
+
+Potential = Subvaraitiespotential(1,5,1e-3,2,math.pi/10,4)
+
+grid = np.linspace(-2,2,100)
+
+X=np.outer(grid, np.ones(100))
+Y=np.outer(grid + 0.5, np.ones(100)).T
+Potential_map=np.zeros([100, 100])
+for i in range(100):
+    for j in range(100):
+            Potential_map[i,j]=Potential.V(np.array([grid[i],grid[j]+0.5]))
+
+fig= plt.figure(figsize=(9,3))
+ax0 = fig.add_subplot(1,2,1, projection='3d')
+ax1 = fig.add_subplot(1,2,2)
+# Plot the surface
+ax0.plot_surface(X, Y, Potential_map, color='b')
+ax1.pcolormesh(X, Y, Potential_map, cmap='coolwarm_r',shading='auto')
+
+fig2=plot_trajectory(Potential)
+plt.show()
