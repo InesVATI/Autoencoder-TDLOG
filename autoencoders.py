@@ -267,6 +267,28 @@ def plot_results(potential, trajectory):
     ax0.bar(x_plot, bars)
     return fig1,fig2
 
+def plot_hist(autoencoder, traj):
+    """Plot the histogram
+    :param autoencoder: model of neural network
+                  traj: trajectory with wich we evaluate the encoder array of shape (time, 2)
+    :return histogram of the collective variable returned by autoencoder for each position in traj
+    """
+    cv = []
+    #compute cv
+    for x in traj:
+        cv.append(xi_ae(autoencoder,  x)[0])
+        
+    #plot_hist
+    fig, axis = plt.subplots(figsize =(10, 5))
+    axis.hist(cv, edgecolor = 'grey', alpha=0.5, color='blue')
+    plt.title('Histogram')
+    plt.xlabel('CV obtained by the encoder')
+    plt.ylabel('Effective')
+    plt.style.use('seaborn-ticks')
+    return fig
+    
+
+
 beta=3
 bowls = np.array([[-0.5,-0.5,0.5,5],[0.5,0.5,0.5,5]])
 #Potential = pt.TripleWellPotential(beta)
