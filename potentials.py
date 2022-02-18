@@ -61,8 +61,9 @@ class MultimodalPotential:
             #print(dis)
             if dis<r:
                 V-=a*(1-(x-x0)*(x-x0)/(r*r))*(1-(y-y0)*(y-y0)/(r*r))
+                #V-=3*a*np.exp(-dis*dis*1000/(r*r))
             #V+=potV(x0,y0,r,x,y,a)
-        V+=0.2 * (x ** 2) + 0.2 * ((y - 1/3) ** 2)
+        V+=0.2 * (x ** 4) + 0.2 * ((y - 1/3) ** 4)
         return V
     
     def dV_x(self, x, y):
@@ -81,7 +82,7 @@ class MultimodalPotential:
             dis = np.sqrt((x0-x)*(x0-x)+(y-y0)*(y-y0))
             if dis<r:
                 dVx+=2*a*((x-x0)/(r*r))*(1-(y-y0)*(y-y0)/(r*r))
-        dVx+= 0.8 * (x)
+        dVx+= 0.8 * (x**3)
         return dVx
     
     def dV_y(self, x, y):
@@ -101,7 +102,7 @@ class MultimodalPotential:
             if dis<r:
                 dVy+=2*a*((y-y0)/(r*r))*(1-(x-x0)*(x-x0)/(r*r))
 
-        dVy+= 0.8 * ((y - 1/3))
+        dVy+= 0.8 * ((y - 1/3)**3)
         return dVy
     
     def nabla_V(self, X):
@@ -265,6 +266,92 @@ class Subvaraitiespotential:
         """
         self.Z, _ = integrate.dblquad(self.boltz_weight, -5, 5, -5, 5)
 
+def g(a):
+    """Gaussian function
+
+    :param a: float, real value
+    :return: float, g(a)
+    """
+    return np.exp(- a ** 2)
+
+class TripleWellPotential:
+    """Class to gather methods related to the potential function"""
+    def __init__(self, beta):
+        """Initialise potential function class
+
+        :param beta: float,  inverse temperature = 1 / (k_B * T)
+        :param Z: float, partition function (computed below)
+        """
+        self.beta = beta
+        self.dim = 2
+        self.Z = None
+        
+    def V(self, X):
+        """Potential fuction
+
+        :param X: np.array, Position  vector (x,y), ndim = 1, shape = (2,)
+        :return: V: float, potential energy value
+        """
+        assert(type(X) == np.ndarray)
+        assert(X.ndim == 1)
+        assert(X.shape[0] == 2)
+        x = X[0]
+        y = X[1]
+        u = g(x) * (g(y - 1/3) - g(y - 5/3))
+        v = g(y) * (g(x - 1) + g(x + 1))
+        V = 3 * u - 5 * v + 0.2 * (x ** 4) + 0.2 * ((y - 1/3) ** 4)
+        return V
+    
+    def dV_x(self, x, y):
+        """
+        :param x: float, x coordinate
+        :param y: float, y coordinate
+
+        :return: dVx: float, derivative of the potential with respect to x
+        """
+        u = g(x) * (g(y - 1/3) - g(y - 5/3))
+        a = g(y) * ((x - 1)*g(x - 1) + (x + 1) * g(x + 1))
+        dVx = -6 * x * u + 10 * a + 0.8 * (x ** 3)
+        return dVx
+    
+    def dV_y(self, x, y):
+        """
+        :param x: float, x coordinate
+        :param y: float, y coordinate
+
+        :return: dVy: float, derivative of the potential with respect to y
+        """
+        u = g(x) * ((y - 1/3) * g(y - 1/3) - (y - 5/3) * g(y - 5/3))
+        b = g(y) * (g(x - 1) + g(x + 1))
+        dVy = -6 * u + 10 * y * b + 0.8 * ((y - 1/3) ** 3)
+        return dVy
+    
+    def nabla_V(self, X):
+        """Gradient of the potential energy fuction
+
+        :param X: np.array, Position  vector (x,y), ndim = 1, shape = (2,)
+        :return: grad(X): np.array, gradient with respect to position vector (x,y), ndim = 1, shape = (2,)
+        """
+        assert(type(X) == np.ndarray)
+        assert(X.ndim == 1)
+        assert(X.shape[0] == 2)
+        return np.array([self.dV_x(X[0], X[1]), self.dV_y(X[0], X[1])])
+        
+    def boltz_weight(self, x, y):
+        """Compute the unnormalized weight of a configuration according to the Boltzmann distribution
+
+        :param x: float, x coordinate
+        :param y: float, y coordinate
+
+        :return: normalized Blotzmann weight
+        """
+        X = np.array([x, y])
+        return np.exp(-self.beta * self.V(X))
+    
+    def set_Z(self):
+        """Partition function to normalize probability densities
+        """
+        self.Z, _ = integrate.dblquad(self.boltz_weight, -5, 5, -5, 5)
 
 def create_figure(potential):
     if potential =="multimodal":
@@ -321,7 +408,7 @@ def create_plots(Potential):
     return fig3D
 
 
-def UnbiasedTraj(pot, X_0, delta_t=1e-3, T=1000, save=1, save_energy=False, seed=0):
+def UnbiasedTraj(pot, X_0, delta_t=1e-3, T=3000, save=1, save_energy=False, seed=0):
     """Simulates an overdamped langevin trajectory with a Euler-Maruyama numerical scheme 
 
     :param pot: potential object, must have methods for energy gradient and energy evaluation
@@ -378,30 +465,3 @@ def plot_trajectory(Potential):
     ax1.plot(range(len(trajectory[:,0])), trajectory[:,0], label='x coodinate along trajectory')
     return fig
 
-
-
-A=1
-rs= 1e-2
-hs=2
-i= math.pi/15
-beta=4
-Potential = Subvaraitiespotential(A, rs, hs, i, beta)
-
-grid = np.linspace(-2,2,100)
-
-X=np.outer(grid, np.ones(100))
-Y=np.outer(grid + 0.5, np.ones(100)).T
-Potential_map=np.zeros([100, 100])
-for i in range(100):
-    for j in range(100):
-            Potential_map[i,j]=Potential.V(np.array([grid[i],grid[j]+0.5]))
-
-fig= plt.figure(figsize=(9,3))
-ax0 = fig.add_subplot(1,2,1, projection='3d')
-ax1 = fig.add_subplot(1,2,2)
-# Plot the surface
-ax0.plot_surface(X, Y, Potential_map, color='b')
-ax1.pcolormesh(X, Y, Potential_map, cmap='coolwarm_r',shading='auto')
-
-fig2=plot_trajectory(Potential)
-plt.show()

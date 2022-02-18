@@ -153,7 +153,7 @@ def create_plots(Potential):
     return fig3D
 
 
-def UnbiasedTraj(pot, X_0 = np.array([0, 0]), delta_t=1e-3, T=1000, save=1, save_energy=False, seed=0):
+def UnbiasedTraj(pot, X_0 = np.array([0, 0]), delta_t=1e-3, T=3000, save=1, save_energy=False, seed=0):
     """Simulates an overdamped langevin trajectory with a Euler-Maruyama numerical scheme 
 
     :param pot: potential object, must have methods for energy gradient and energy evaluation
