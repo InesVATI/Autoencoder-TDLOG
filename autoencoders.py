@@ -182,7 +182,7 @@ def grad_xi_ae(model, x):
     grad = torch.autograd.grad(enc, x)[0]
     return grad.detach().numpy()
 
-def plot_results(potential, trajectory):
+def train(ae0, ae1, learning_rate, batch_size, num_epochs, loss, optimizer, trajectory):
     """
         :param potential:  MultimodalPotential, potential
         :param trajectory: np.array
@@ -190,22 +190,16 @@ def plot_results(potential, trajectory):
         :return: Fig1: Figure, training and test losses plots
         :return: Fig2: Figure, Collective variables plots
         """
-    learning_rate = 0.005
-    batch_size = 100
-    num_epochs = 100
-    loss = 'MSE'
-    optimizer = 'Adam'
-    #ae0 = SimpleAutoEncoder(2,1) 
-    ae1 = DeepAutoEncoder(2, [4,8,4], 1)
-    #loss_function, optimizer = set_learning_parameters(ae0, learning_rate=learning_rate, loss=loss, optimizer=optimizer)
-    #ae0, training_data0 = train_AE(ae0,
-                                #loss_function,
-                                #optimizer,
-                                #trajectory,
-                                #np.ones(trajectory.shape[0]),
-                                #batch_size=batch_size,
-                                #num_epochs=num_epochs
-                                #)
+   
+    loss_function, optimizer = set_learning_parameters(ae0, learning_rate=learning_rate, loss=loss, optimizer=optimizer)
+    ae0, training_data0 = train_AE(ae0,
+                                loss_function,
+                                optimizer,
+                                trajectory,
+                                np.ones(trajectory.shape[0]),
+                                batch_size=batch_size,
+                                num_epochs=num_epochs
+                                )
     loss_function, optimizer = set_learning_parameters(ae1, learning_rate=learning_rate, loss=loss, optimizer=optimizer)
     ae1, training_data1 = train_AE(ae1,
                                 loss_function,
@@ -217,55 +211,56 @@ def plot_results(potential, trajectory):
                                 )
 
     #--- plot the evolution of the losses ---
-    #loss_evol0 = []
+    loss_evol0 = []
     loss_evol1 = []
     # obtain average losses on each epoch by averaging the losses from each batch
     for i in range(len(training_data1)):
-        #loss_evol0.append([torch.mean(training_data0[i][0]), torch.mean(training_data0[i][1])])
+        loss_evol0.append([torch.mean(training_data0[i][0]), torch.mean(training_data0[i][1])])
         loss_evol1.append([torch.mean(training_data1[i][0]), torch.mean(training_data1[i][1])])
-    #loss_evol0 = np.array(loss_evol0)
+    loss_evol0 = np.array(loss_evol0)
     loss_evol1 = np.array(loss_evol1)
+
     # plot these average losses
     fig1, (ax0, ax1)  = plt.subplots(1,2, figsize=(10,4)) 
-    #ax0.plot(loss_evol0[:, 0], '--', label='train loss', marker='x')
-    #ax0.plot(range(1, len(loss_evol0[:, 1])), loss_evol0[: -1, 1], '-.', label='test loss', marker='+')
-    #ax0.legend()
-    #ax0.set_title("Average losses for the simple AE")
-    ax0.plot(loss_evol1[:, 0], '--', label='train loss', marker='x')
-    ax0.plot(range(1, len(loss_evol1[:, 1])), loss_evol1[: -1, 1], '-.', label='test loss', marker='+')
+    ax0.plot(loss_evol0[:, 0], '--', label='train loss', marker='x')
+    ax0.plot(range(1, len(loss_evol0[:, 1])), loss_evol0[: -1, 1], '-.', label='test loss', marker='+')
     ax0.legend()
-    ax0.set_title(" Average losses for the Deep AE")
+    ax0.set_title("Average losses for the simple AE")
+    ax1.plot(loss_evol1[:, 0], '--', label='train loss', marker='x')
+    ax1.plot(range(1, len(loss_evol1[:, 1])), loss_evol1[: -1, 1], '-.', label='test loss', marker='+')
+    ax1.legend()
+    ax1.set_title(" Average losses for the Deep AE")
 
+    return fig1
+    
+def plot_results(ae0, ae1, potential):  
+    
+    
     #--- plot the contour lines of the AE functions ---
     # construct the grid
     grid = np.linspace(-2,2,100)
     x_plot = np.outer(grid, np.ones(100))
     y_plot = np.outer(grid + 0.5, np.ones(100)).T
     potential_on_grid = np.zeros([100, 100])
-    #xi_ae0_on_grid = np.zeros([100, 100])
+    xi_ae0_on_grid = np.zeros([100, 100])
     xi_ae1_on_grid = np.zeros([100, 100])
-    bars= np.zeros(100)
+    #bars= np.zeros(100)
     # compute values of potential and AEs on the grid
     for i in range(100):
         for j in range(100):
             x = np.array([grid[i], grid[j] + 0.5])
             potential_on_grid[i, j] = potential.V(x)
-            #xi_ae0_on_grid[i,j] = xi_ae(ae0, x)
+            xi_ae0_on_grid[i,j] = xi_ae(ae0, x)
             xi_ae1_on_grid[i,j] = xi_ae(ae1, x)
-            bars[i] += xi_ae(ae1, x)
     # superimpose contour plots to colormap of the potential
-    #fig2, (ax0, ax1)  = plt.subplots(1,2, figsize=(9,3))        
-    #ax0.pcolormesh(x_plot, y_plot, potential_on_grid, cmap='coolwarm_r',shading='auto')
-    #ax0.contour(x_plot, y_plot, xi_ae0_on_grid, 20, cmap = 'viridis')
-    #ax0.set_title("Reaction coordinates with the simple AE")
+    fig2, (ax0, ax1)  = plt.subplots(1,2, figsize=(9,3))        
+    ax0.pcolormesh(x_plot, y_plot, potential_on_grid, cmap='coolwarm_r',shading='auto')
+    ax0.contour(x_plot, y_plot, xi_ae0_on_grid, 20, cmap = 'viridis')
+    ax0.set_title("Reaction coordinates with the simple AE")
     ax1.pcolormesh(x_plot, y_plot, potential_on_grid, cmap='coolwarm_r',shading='auto')
     ax1.contour(x_plot, y_plot, xi_ae1_on_grid, 20, cmap = 'viridis')
     ax1.set_title("Reaction coordinates with the Deep AE")
-    fig2, (ax0, ax1)  = plt.subplots(1,2, figsize=(9,3))  
-    bars= np.round(bars).astype(int)  
-    print(bars)    
-    ax0.bar(x_plot, bars)
-    return fig1,fig2
+    return fig2
 
 def plot_hist(autoencoder, traj):
     """Plot the histogram
@@ -289,18 +284,19 @@ def plot_hist(autoencoder, traj):
     
 
 
-beta=3
-bowls = np.array([[-0.5,-0.5,0.5,5],[0.5,0.5,0.5,5]])
+beta=5
+bowls = np.array([[-0.7,-0.7,0.5,2],[0.7,0.7,0.5,2], [0,0,0.3,2]])
 #Potential = pt.TripleWellPotential(beta)
 
-Potential = pt.MultimodalPotential(bowls,beta)
-fig_pot=pt.create_plots(Potential)
-fig_pot.show()
+#Potential = pt.MultimodalPotential(bowls,beta)
+
 A=1
 rs= 1e-2
 hs=2
 i= math.pi/15
-#Potential =pt.Subvaraitiespotential(A, rs, hs, i, beta)
+Potential =pt.Subvaraitiespotential(A, rs, hs, i, beta)
+fig_pot=pt.create_plots(Potential)
+fig_pot.show()
 
 grid = np.linspace(-2,2,100)
 
@@ -328,17 +324,35 @@ for i in range(100):
 
 delta_t = 0.01
 T = 40000
-x_0 = np.array([0, 0])
-trajectory, _ = pt.UnbiasedTraj(Potential, x_0, delta_t=delta_t, T=T, save=1, save_energy=False, seed=None)
-#trajectory=np.loadtxt('traj_mod2.csv', delimiter=',')
-fig2 = plt.figure(figsize=(9,3))
+x_0 = np.array([0.7, 0.7])
+#trajectory, _ = pt.UnbiasedTraj(Potential, x_0, delta_t=delta_t, T=T, save=1, save_energy=False, seed=None)
+trajectory=np.loadtxt('traj_subbis_1.csv', delimiter=',')
+fig0 = plt.figure(figsize=(9,3))
 ax0 = fig.add_subplot(1, 2, 1)
 ax1 = fig.add_subplot(1, 2, 2)
 ax0.pcolormesh(x_plot,y_plot,  potential_on_grid, cmap='coolwarm_r', shading='auto')
 ax0.scatter(trajectory[:,0], trajectory[:,1], marker='x')
 ax1.plot(range(len(trajectory[:,0])), trajectory[:,0], label='x coodinate along trajectory')
-np.savetxt('traj_mod3.csv', trajectory, delimiter = ',')
+#np.savetxt('traj_subbis_1.csv', trajectory, delimiter = ',')
 
-fig1,fig2=plot_results(Potential, trajectory)
+learning_rate = 0.005
+batch_size = 100
+num_epochs = 500
+loss = 'MSE'
+optimizer = 'Adam'
+ae0 = SimpleAutoEncoder(2,1) 
+ae = DeepAutoEncoder(2, [4,8,2], 1)
+print(ae)
+fig2=train(ae0, ae, learning_rate, batch_size, num_epochs, loss, optimizer, trajectory)
+#ae = torch.load('AE_model_sub4')
+fig3=plot_results(ae0, ae,Potential)
+torch.save(ae, 'AE_model_subbis')
+
+fig4 = plot_hist(ae, trajectory)
+"""
+X=np.outer(grid, np.ones(100))
+Y=np.outer(grid + 0.5, np.ones(100)).T
+Z=np.array([X,Y])
+print( [xi_ae(ae, [x,y]) for x,y in Z])"""
 
 plt.show()
