@@ -13,6 +13,7 @@ class SimpleAutoEncoder(nn.Module):
         :param input_dim: int, Number of dimension of the input vectors
         :param bottleneck_dim: int, Number of dimension of the bottleneck
         """
+        """
         super(SimpleAutoEncoder, self).__init__()
         self.encoder = torch.nn.Sequential(
             torch.nn.Linear(input_dim, bottleneck_dim),
@@ -20,7 +21,21 @@ class SimpleAutoEncoder(nn.Module):
         )
         self.decoder = torch.nn.Sequential(
             torch.nn.Linear(bottleneck_dim, input_dim),
-        )
+        )"""
+
+        super(SimpleAutoEncoder, self).__init__()
+        self.encoder = torch.nn.Sequential(
+                torch.nn.Linear(input_dim, 4),
+                torch.nn.Linear(4, 8),
+                torch.nn.Linear(8, 5),
+                torch.nn.Linear(5, bottleneck_dim),
+            )
+        self.decoder = torch.nn.Sequential(
+                torch.nn.Linear(bottleneck_dim, 6),
+                torch.nn.Linear(6, 10),
+                torch.nn.Linear(10, 8),
+                torch.nn.Linear(8, input_dim),
+            )
 
     def forward(self, inp):
         encoded = self.encoder(inp)
@@ -39,23 +54,23 @@ class DeepAutoEncoder(nn.Module):
         """
         super(DeepAutoEncoder, self).__init__()
         self.encoder = torch.nn.Sequential(
-            torch.nn.Linear(input_dim, hidden_dims[0]),
+            torch.nn.Linear(input_dim, 4),
             torch.nn.Tanh(),
-            torch.nn.Linear(hidden_dims[0], hidden_dims[1]),
+            torch.nn.Linear(4, 8),
             torch.nn.Tanh(),
-            torch.nn.Linear(hidden_dims[1], hidden_dims[2]),
+            torch.nn.Linear(8, 5),
             torch.nn.Tanh(),
-            torch.nn.Linear(hidden_dims[-1], bottleneck_dim),
+            torch.nn.Linear(5, bottleneck_dim),
             torch.nn.Tanh()
         )
         self.decoder = torch.nn.Sequential(
-            torch.nn.Linear(bottleneck_dim, hidden_dims[-1]),
+            torch.nn.Linear(bottleneck_dim, 6),
             torch.nn.Tanh(),
-            torch.nn.Linear(hidden_dims[-1], hidden_dims[-2]),
+            torch.nn.Linear(6, 10),
             torch.nn.Tanh(),
-            torch.nn.Linear(hidden_dims[-2], hidden_dims[-3]),
+            torch.nn.Linear(10, 8),
             torch.nn.Tanh(),
-            torch.nn.Linear(hidden_dims[0], input_dim),
+            torch.nn.Linear(8, input_dim),
         )
 
     def forward(self, inp):
@@ -285,16 +300,16 @@ def plot_hist(autoencoder, traj):
 
 
 beta=5
-bowls = np.array([[-0.7,-0.7,0.5,2],[0.7,0.7,0.5,2], [0,0,0.3,2]])
+bowls = np.array([[-0.7,-0.7,0.5,2],[0.7,0.7,0.5,2], [0,0,0.3,1]])
 #Potential = pt.TripleWellPotential(beta)
 
-#Potential = pt.MultimodalPotential(bowls,beta)
+Potential = pt.MultimodalPotential(bowls,beta)
 
 A=1
 rs= 1e-2
 hs=2
 i= math.pi/15
-Potential =pt.Subvaraitiespotential(A, rs, hs, i, beta)
+#Potential =pt.Subvaraitiespotential(A, rs, hs, i, beta)
 fig_pot=pt.create_plots(Potential)
 fig_pot.show()
 
@@ -326,15 +341,15 @@ delta_t = 0.01
 T = 40000
 x_0 = np.array([0.7, 0.7])
 #trajectory, _ = pt.UnbiasedTraj(Potential, x_0, delta_t=delta_t, T=T, save=1, save_energy=False, seed=None)
-trajectory=np.loadtxt('traj_subbis_1.csv', delimiter=',')
+trajectory=np.loadtxt('traj_bowl3_2.csv', delimiter=',')
 fig0 = plt.figure(figsize=(9,3))
-ax0 = fig.add_subplot(1, 2, 1)
-ax1 = fig.add_subplot(1, 2, 2)
+ax0 = fig0.add_subplot(1, 2, 1)
+ax1 = fig0.add_subplot(1, 2, 2)
 ax0.pcolormesh(x_plot,y_plot,  potential_on_grid, cmap='coolwarm_r', shading='auto')
 ax0.scatter(trajectory[:,0], trajectory[:,1], marker='x')
 ax1.plot(range(len(trajectory[:,0])), trajectory[:,0], label='x coodinate along trajectory')
 #np.savetxt('traj_subbis_1.csv', trajectory, delimiter = ',')
-
+"""
 learning_rate = 0.005
 batch_size = 100
 num_epochs = 500
@@ -346,10 +361,11 @@ print(ae)
 fig2=train(ae0, ae, learning_rate, batch_size, num_epochs, loss, optimizer, trajectory)
 #ae = torch.load('AE_model_sub4')
 fig3=plot_results(ae0, ae,Potential)
-torch.save(ae, 'AE_model_subbis')
+torch.save(ae, 'AE_model_modbis_comparison')
+torch.save(ae0, 'linearAE_model_mod')
 
 fig4 = plot_hist(ae, trajectory)
-"""
+
 X=np.outer(grid, np.ones(100))
 Y=np.outer(grid + 0.5, np.ones(100)).T
 Z=np.array([X,Y])
